@@ -1,0 +1,15 @@
+{% if link.icon_image %}
+	{% assign platform = link.link_label %}
+	{% case platform %}
+		{% when "Facebook", "Twitter", "Youtube", "RSS" %}
+			{% assign svg_url = platform | slugify | prepend: '/svg/' | append: '.svg' %}
+			<span class="{{c}}__icon">
+				{% include {{svg_url}} %}
+			</span>
+		{% else %}
+			<img class="{{c}}__icon"
+	      		 src="{{ link.icon_image }}"
+	      		 alt="{{ link.link_label }}" />
+	{% endcase %}
+{% endif %}
+<span class="{{c}}__link-label">{{ link.link_label }}</span>

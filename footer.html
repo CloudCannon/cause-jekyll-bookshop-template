@@ -1,0 +1,35 @@
+{% assign c = "c-footer" %}
+{% assign footer = site.data.footer %}
+<div class="{{c}}">
+	<div class="{{c}}__columns">
+		{% for column in footer.link_columns %}
+			<div class="{{c}}__column">
+				{% if column.heading %}
+					<h4>{{ column.heading }}</h4>
+				{% endif %}
+				<ul>
+					{% for link in column.links %}
+						<li>
+							{% if link.link_url %}
+								<a class="{{c}}__link"
+								   href="{{ link.link_url }}"
+								   {% if link.open_in_new_tab %}
+								   	   target="_blank"
+								   {% endif %}>
+								   {% include footer-link.html %}
+								</a>
+							{% else %}
+								<div class="{{c}}__link">
+								   {% include footer-link.html %}
+								</div>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="{{c}}__lower-text">
+		{{ footer.lower_text_html }}
+	</div>
+</div>
