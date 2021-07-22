@@ -1,0 +1,10 @@
+[component]
+array_structures = [ "content_blocks" ]
+label = "Page Heading"
+description = "Generic page heading"
+icon = "wysiwyg"
+tags = ["Content"]
+
+[props]
+heading = "Blog"
+subheading = "Keep up with the latest news"

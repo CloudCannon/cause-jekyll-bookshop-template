@@ -1,0 +1,15 @@
+.c-page-heading {
+	display: block;
+	justify-content: center;
+	align-items: center;
+	padding: var(--component-padding) 0 0 0;
+	text-align: center;
+
+	&__heading {
+		font-size: 3.6em;
+	}
+
+	&__subheading {
+		margin-bottom: 0;
+	}
+}

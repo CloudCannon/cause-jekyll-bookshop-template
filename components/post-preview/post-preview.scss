@@ -1,0 +1,20 @@
+.c-post-preview {
+	padding: 0 0 100px 0;
+
+	&__top {
+		display: block;
+	}
+
+	&__preview-image {
+		display: none;
+		padding: 0 20px 20px 0;
+		width: 210px;
+		height: 160px;
+		object-fit: cover;
+		border-radius: 2px;
+	}
+
+	&__content {
+
+	}
+}

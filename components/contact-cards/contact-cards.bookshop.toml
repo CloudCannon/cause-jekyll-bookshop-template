@@ -1,0 +1,26 @@
+[component]
+array_structures = [ "content_blocks" ]
+label = "Call to action"
+description = "Generic call to action block"
+icon = "wysiwyg"
+tags = ["Content"]
+
+[props]
+heading = "About"
+content_html = "<p>Serving your community for over a century, Justice Law is committed to helping people through a number of services. Our services range from conveyancing, mortgages to family law. Our clients range from large businesses to first home buyers. </p><p>Meet the members of our capable team:</p>"
+
+[[props.contacts]]
+image = "//placekitten.com/440/440?a=.png"
+name = "Jane Doe"
+role = "LLB"
+number = "(03) 123 4567"
+phone_extension_number = "02"
+description = "Jane has 19 years of experience in law, and specialises in property and business."
+
+[[props.contacts]]
+image = "//placebear.com/440/440?a=.png"
+name = "John Doe"
+role = "LLB"
+number = "(03) 123 4567"
+phone_extension_number = "11"
+description = "With an interest in employment law, John works tirelessly to improve workplaces."

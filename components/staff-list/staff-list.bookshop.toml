@@ -1,0 +1,9 @@
+[component]
+array_structures = [ "content_blocks" ]
+label = "Staff List"
+description = "Lists all members within the Staff Members collection"
+icon = "wysiwyg"
+tags = ["Content"]
+
+[props]
+show_staff = true

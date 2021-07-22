@@ -1,0 +1,21 @@
+{% assign c = "c-staff-list" %}
+
+{% if include.show_staff %}
+	<div class="{{c}} 
+				component
+				component-attributes">
+		<div class="{{c}}__wrapper">
+			{% for member in site.staff_members %}
+				<div class="{{c}}__staff-card">
+					<img class="{{c}}__staff-image" 
+						 src="{{ member.image }}"
+						 alt="{{ member.name }}" />
+					<h4 class="{{c}}__name">
+						<a href="https://twitter.com/{{ member.twitter }}">{{ member.name }}</a>
+					</h4>
+					<p class="{{c}}__position">{{ member.position }}</p>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endif %}

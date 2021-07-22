@@ -1,0 +1,27 @@
+{% assign c = "c-contact-cards" %}
+
+<div class="{{c}}
+			component
+			component-attributes">
+	<div class="{{c}}__content">
+		<h2>{{ include.heading }}</h2>
+		{{ include.content_html }}
+	</div>
+	<div class="{{c}}__cards">
+		{% for card in include.contacts %}
+			<div class="{{c}}__card">
+				<div class="{{c}}__details-wrapper">
+					<img src="{{ card.image }}" alt="{{ card.name }}" />
+					<div class="{{c}}__details">
+						<h3 class="{{c}}__name">{{ card.name }}</h3>
+						<p class="{{c}}__role">{{ card.role }}</p>
+						<p class="{{c}}__number">
+							<a href="tel:{{ card.number }}">{{ card.number }}</a>{% if card.phone_extension_number %} ext {{ card.phone_extension_number }}{% endif %}
+						</p>
+					</div>
+				</div>
+				<p class="{{c}}__description">{{ card.description }}</p>
+			</div>
+		{% endfor %}
+	</div>
+</div>

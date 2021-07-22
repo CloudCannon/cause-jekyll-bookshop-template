@@ -1,0 +1,16 @@
+{% assign c = "c-post-preview" %}
+
+<div class="{{c}}">
+	<div class="{{c}}__top">
+		<img class="{{c}}__preview-image" src="{{ include.post.SEO_options.image }}" alt="{{ include.post.title }} image" />
+		{% bookshop post-header post=include.post %}
+	</div>
+	<div class="{{c}}__content">
+		{{ include.post.excerpt }}
+	</div>
+
+	{% bookshop button 
+				label="Read More"
+				variant="Filled"
+				link_url=include.post.url %}
+</div>

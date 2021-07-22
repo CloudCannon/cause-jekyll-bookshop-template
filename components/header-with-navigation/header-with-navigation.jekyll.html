@@ -1,0 +1,27 @@
+{% assign c = "c-header-with-navigation" %}
+
+<div class="{{c}}
+			{% unless include.full_height %}
+				{{c}}--small
+			{% endunless %}
+			component
+			component-attributes"
+	 style="background-image: url('{{ include.background_image }}')">
+	<div class="{{c}}__content-wrapper">
+		<div class="{{c}}__heading">
+			<h1>
+				<a href="{{ include.heading_link_url }}">{{ include.heading }}</a>
+			</h1>
+		</div>
+		<ul class="{{c}}__navigation">
+			{% assign navigation = site.data.navigation.navigation_items %}
+			{% for link in navigation %}
+				<li><a class="{{c}}__nav-link
+							  {% if page.url == link.link_url %}
+							  	{{c}}__nav-link--active
+							  {% endif %}"
+					   href="{{ link.link_url }}">{{ link.label }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

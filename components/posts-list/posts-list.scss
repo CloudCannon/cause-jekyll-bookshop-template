@@ -1,0 +1,17 @@
+.c-posts-list {
+	padding: var(--component-padding) 0;
+
+	&__heading, &__content {
+		text-align: center;
+	}
+
+	&__wrapper {
+		margin: 0 auto;
+		max-width: 750px;
+
+		.c-post-preview:last-child {
+			padding-bottom: 0;
+		}
+	}
+}
+

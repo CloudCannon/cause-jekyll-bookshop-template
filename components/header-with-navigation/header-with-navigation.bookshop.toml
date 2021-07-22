@@ -1,0 +1,13 @@
+[component]
+array_structures = [ "content_blocks" ]
+label = "Header With Navigation"
+description = "Page header with navigation"
+icon = "wysiwyg"
+tags = ["Headers"]
+
+[props]
+heading = "Justice"
+heading_link_url = "/"
+show_navigation = true
+full_height = true
+background_image = "/images/building.jpg"
