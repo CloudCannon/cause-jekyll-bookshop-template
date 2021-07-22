@@ -1,0 +1,54 @@
+---
+---
+// Variables
+
+
+:root {
+	// Breakpoints
+    --breakpoint-max: 1180px;
+    --breakpoint-min: 900px;
+    
+    --s-design-min: 375;
+    --s-design-max: 900;
+	// Light
+	--page-color: {{ site.data.theme_settings.light_theme_settings.page_color | default: "#ffffff" }};
+	--component-alt-color: {{ site.data.theme_settings.light_theme_settings.component_alt_color | default: "#f5f5f5" }};
+	--brand-color: {{ site.data.theme_settings.light_theme_settings.brand_color | default: "#4182e4" }};
+	--headings-color: {{ site.data.theme_settings.light_theme_settings.headings_color | default: "#000000" }};
+	--text-color: {{ site.data.theme_settings.light_theme_settings.text_color | default: "#666666" }};
+	--light-text-color: {{ site.data.theme_settings.light_theme_settings.light_text_color | default: "#ffffff" }};
+	--link-color: {{ site.data.theme_settings.light_theme_settings.link_color | default: "#00a4ca" }};
+	--button-fill: {{ site.data.theme_settings.light_theme_settings.button_fill_color | default: "#4182e4" }};
+	--button-fill-text: {{ site.data.theme_settings.light_theme_settings.button_fill_text_color | default: "#4182e4" }};
+	--tag-color: {{ site.data.theme_settings.light_theme_settings.tag_color | default: "#eeeeee" }};
+	--navigation-color: {{ site.data.theme_settings.light_theme_settings.navigation_color | default: "#fefefe" }};
+	--footer-color: {{ site.data.theme_settings.light_theme_settings.footer_color | default: "#2b2b40" }};
+	--footer-link-color: {{ site.data.theme_settings.light_theme_settings.footer_link_color | default: "#999999" }};
+	--footer-link-hover-color: {{ site.data.theme_settings.light_theme_settings.footer_link_hover_color | default: "#ffffff" }};
+	// Dark
+	--dark-page-color: {{ site.data.theme_settings.dark_theme_settings.page_color | default: "#ffffff" }};
+	--dark-component-alt-color: {{ site.data.theme_settings.dark_theme_settings.component_alt_color | default: "#f5f5f5" }};
+	--dark-brand-color: {{ site.data.theme_settings.dark_theme_settings.brand_color | default: "#4182e4" }};
+	--dark-headings-color: {{ site.data.theme_settings.dark_theme_settings.headings_color | default: "#000000" }};
+	--dark-text-color: {{ site.data.theme_settings.dark_theme_settings.text_color | default: "#666666" }};
+	--dark-light-text-color: {{ site.data.theme_settings.light_theme_settings.light_text_color | default: "#ffffff" }};
+	--dark-link-color: {{ site.data.theme_settings.dark_theme_settings.link_color | default: "#00a4ca" }};
+	--dark-button-fill: {{ site.data.theme_settings.dark_theme_settings.button_fill_color | default: "#4182e4" }};
+	--dark-button-fill-text: {{ site.data.theme_settings.dark_theme_settings.button_fill_text_color | default: "#4182e4" }};
+	--dark-tag-color: {{ site.data.theme_settings.dark_theme_settings.tag_color | default: "#444444" }};
+	--dark-navigation-color: {{ site.data.theme_settings.dark_theme_settings.navigation_color | default: "#202020" }};
+	--dark-footer-color: {{ site.data.theme_settings.dark_theme_settings.footer_color | default: "#2b2b40" }};
+	--dark-footer-link-color: {{ site.data.theme_settings.light_theme_settings.footer_link_color | default: "#999999" }};
+	--dark-footer-link-hover-color: {{ site.data.theme_settings.light_theme_settings.footer_link_hover_color | default: "#ffffff" }};
+
+
+	--body-font: {{ site.data.theme_settings.body_font }};
+	--content-font-size: {{ site.data.theme_settings.content_font_size_number }}em;
+
+}
+
+
+{% bookshop_scss %}
+
+@import "site";
+@import "cms-styles.css"
