@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{% assign l = "archive-layout" %}
+<div class="{{l}}">
+	<h1 class="{{l}}__heading">Blog</h1>
+
+	<div class="{{l}}__tags">
+		<span class="{{l}}__tag"><a href="/blog/">{{ page.title | capitalize }} &#215;</a></span>
+	</div>
+
+	{% bookshop posts-list 
+		show_posts=true 
+		tag=page.title %}
+</div>

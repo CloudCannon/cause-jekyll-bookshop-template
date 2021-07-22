@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<div class="layout layout--post">
+	{% bookshop post-header 
+		post=page
+		title=true %}
+	{{ content }}
+	{% if page.author_staff_member %}
+		{% bookshop author-card %}
+	{% endif %}
+	{% bookshop post-navigation %}
+</div>
