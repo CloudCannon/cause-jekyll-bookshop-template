@@ -1,0 +1,140 @@
+theme: cc-template-components
+
+plugins:
+  - jekyll-bookshop
+  - bookshop-array-structures
+  - jekyll-postcss-v2
+  - jekyll-archives
+  - jekyll-feed
+
+jekyll-archives:
+  enabled:
+    - categories
+
+# Multiple bookshops can be used on one website,
+# or different production / staging locations.
+bookshop_locations:
+  - ../bookshop_gem/components/
+  - ../bookshop_gem/
+  - ../components
+
+exclude:
+  - postcss.config.js
+  - node_modules
+
+permalink: pretty
+
+data_dir: '_website_settings'
+collections_dir: 'collections'
+collections:
+  web_pages:
+    name: 'Web Pages'
+    _icon: 'web'
+    _singular_name: 'Page'
+    _slug: 'web_pages'
+    output: true
+    permalink: /:title/
+  staff_members:
+    name: 'Staff Members'
+    _icon: 'supervisor_account'
+    _hide_content: true
+    _singular_name: 'Staff Member'
+    _slug: 'staff_members'
+    output: false
+
+# Make sure you add any new collections here for them to show in CloudCannon
+_explore:
+  groups:
+    - heading: Pages
+      collections:
+        - web_pages
+    - heading: Blog
+      collections:
+        - posts
+        - drafts
+        - staff_members
+    - heading: Settings
+      collections:
+        - website_settings
+
+# The rest of this array structure will be
+# populated by the bookshop-array-structures plugin.
+_array_structures:
+  content_blocks:
+    style: modal
+
+_select_data:
+  page_themes:
+    - Light
+    - Dark
+  alignments:
+    - Left
+    - Center
+    - Right
+  link_type:
+    - Text
+    - Button
+
+_comments:
+  live_domain_url: "Remove any '/' at the end of the URL so your domain looks like this - 'https://example.com'"
+  website_description_text: Used for search engine optimisation and sharing on social media
+  social_media_share_image: 1200x675px
+  twitter_handle: E.g. @username
+  large_bookmark_icon_image: 32x32px
+  small_bookmark_icon_image: 16x16px
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
+      _options:
+        content: &content_defaults
+          uploads_dir: "/images/uploads/:title"
+          width: 1180
+          height: 900
+          format: p h1 h2 h3 h4 h5 h6 div
+          styles: /assets/cms-styles.css
+          undo: true
+          redo: true
+          left: align-to-left
+          center: align-to-center
+          right: align-to-right
+          justify: justify
+          bold: true
+          italic: true
+          underline: true
+          strike: true
+          subscript: false
+          superscript: false
+          blockquote: true
+          table: true
+          copyformatting: true
+          removeformat: true
+          numberedlist: true
+          bulletedlist: true
+          outdent: false
+          indent: false
+          image: true
+          link: true
+          embed: true
+        content_text:
+          *content_defaults
+        content_html:
+          *content_defaults
+        text:
+          *content_defaults
+        text_html:
+          *content_defaults
+  -
+    scope:
+      type: web_pages
+      path: _web_pages/index.html
+    values:
+      permalink: /
+  -
+    scope:
+      type: posts
+    values:
+      layout: post

@@ -1,0 +1,10 @@
+website_name: Cause
+live_domain_url:
+website_description_text:
+social_media_share_image:
+twitter_handle:
+icons:
+  small_bookmark_icon_image: /images/icons/favicon-16.jpg
+  large_bookmark_icon_image: /images/icons/favicon-32.jpg
+  small_mobile_icon_image: /images/icons/mobile-128.jpg
+  large_mobile_icon_image: /images/icons/mobile-256.jpg

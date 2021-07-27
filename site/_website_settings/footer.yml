@@ -1,0 +1,52 @@
+link_columns:
+  - label: Primary
+    heading: Pages
+    links:
+      - link_label: Home
+        link_url: /
+        icon_image:
+        open_in_new_tab: false
+      - link_label: About
+        link_url: /about/
+        icon_image:
+        open_in_new_tab: false
+      - link_label: Services
+        link_url: /services/
+        icon_image:
+        open_in_new_tab: false
+      - link_label: Contact
+        link_url: /contact/
+        icon_image:
+        open_in_new_tab: false
+      - link_label: Blog
+        link_url: /blog/
+        icon_image:
+        open_in_new_tab: false
+  - label: Secondary
+    heading: Social
+    links:
+      - link_label: Facebook
+        link_url: 'https://facebook.com/cloudcannon/'
+        icon_image: /images/svg/facebook.svg
+        open_in_new_tab: false
+      - link_label: Twitter
+        link_url: 'https://twitter.com/cloudcannon/'
+        icon_image: /images/svg/twitter.svg
+        open_in_new_tab: false
+      - link_label: Youtube
+        link_url: 'https://youtube.com/cloudcannon/'
+        icon_image: /images/svg/youtube.svg
+        open_in_new_tab: false
+  - label: Social
+    heading: Justice
+    links:
+      - link_label: "Working with people for over 50 years. Justice Law strives to excel for all clients in every situation."
+        link_url:
+        icon_image:
+      - link_label: Subscribe with RSS
+        link_url: '/feed.xml'
+        icon_image: /images/svg/rss.svg
+        open_in_new_tab: false
+
+lower_text_html: >-
+  <p>© 2021 Justice • <a href="#">Terms</a> • <a href="https://cloudcannon.com/community/">Template by CloudCannon</a></p>

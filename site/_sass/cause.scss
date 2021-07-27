@@ -1,0 +1,40 @@
+body {
+    --breakpoint-max: 1000px;
+    --breakpoint-min: 900px;
+    
+    --s-design-min: 375;
+    --s-design-max: 900;
+    --component-padding: 50px;
+
+    h2 {
+		margin: 0 0 20px 0;
+		font-size: 4.8em;
+	}
+
+	.c-image-and-text-blocks {
+
+		&:first-child {
+			.c-image-and-text-blocks__image-wrapper {
+				margin-right: -45px;
+
+				img {
+					margin: 100px auto 0 auto;
+					width: 120%;
+					max-width: 535px;
+				}
+			}
+		}
+			&:first-child {
+				.c-image-and-text-blocks--left__image-wrapper  {
+					margin-right: 0;
+
+					img {
+						margin: 100px auto 0 auto;
+						width: 100%;
+						max-width: 100%;
+					}
+				}
+			}
+	}
+}
+
