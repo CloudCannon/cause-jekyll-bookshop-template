@@ -1,9 +1,9 @@
 source "https://rubygems.org"
-# gem 'cc-template-components', git: "https://github.com/jtrbuhovic/cc-template-components.git", :branch => 'main'
 
 
 group :jekyll_plugins do
-  gem 'cc-template-components', :path => '../../cc-template-components'
+  # gem 'cc-template-components', :path => '../../cc-template-components'
+  gem 'cc-template-components', git: "https://github.com/jtrbuhovic/cc-template-components.git", :branch => 'main'
   gem "jekyll-bookshop", ">= 2.0.0.pre.alpha"
   gem "bookshop-array-structures", ">= 2.0.0.pre.alpha"
   gem 'jekyll-watch', :git => "https://github.com/CloudCannon/jekyll-watch"
