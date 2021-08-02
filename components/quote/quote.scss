@@ -57,5 +57,9 @@
 		font-weight: bold;
 		font-size: 1.4em;
 		font-style: normal;
+
+		&--alternate {
+			display: none;
+		}
 	}
 }

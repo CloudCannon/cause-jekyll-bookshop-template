@@ -5,6 +5,7 @@
 			component-attributes">
 	<div class="{{c}}__image-wrapper">
 		<img src="{{ include.image }}" alt="{{ include.name }}" />
+		<p class="{{c}}__quote-details {{c}}__quote-details--alternate">{{ include.name }} - {{ include.role }}</p>
 	</div>
 	<div class="{{c}}__content-wrapper">
 		<p class="{{c}}__quote">{{ include.quote_text }}</p>
