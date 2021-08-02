@@ -21,6 +21,7 @@
 	--button-fill: {{ site.data.theme_settings.light_theme_settings.button_fill_color | default: "#4182e4" }};
 	--button-fill-text: {{ site.data.theme_settings.light_theme_settings.button_fill_text_color | default: "#4182e4" }};
 	--tag-color: {{ site.data.theme_settings.light_theme_settings.tag_color | default: "#eeeeee" }};
+	--border-color: {{ site.data.theme_settings.light_theme_settings.border_color | default: "#dfdfdf" }};
 	--navigation-color: {{ site.data.theme_settings.light_theme_settings.navigation_color | default: "#fefefe" }};
 	--footer-color: {{ site.data.theme_settings.light_theme_settings.footer_color | default: "#2b2b40" }};
 	--footer-link-color: {{ site.data.theme_settings.light_theme_settings.footer_link_color | default: "#999999" }};
@@ -36,6 +37,7 @@
 	--dark-button-fill: {{ site.data.theme_settings.dark_theme_settings.button_fill_color | default: "#4182e4" }};
 	--dark-button-fill-text: {{ site.data.theme_settings.dark_theme_settings.button_fill_text_color | default: "#4182e4" }};
 	--dark-tag-color: {{ site.data.theme_settings.dark_theme_settings.tag_color | default: "#444444" }};
+	--dark-border-color: {{ site.data.theme_settings.light_theme_settings.border_color | default: "#dfdfdf" }};
 	--dark-navigation-color: {{ site.data.theme_settings.dark_theme_settings.navigation_color | default: "#202020" }};
 	--dark-footer-color: {{ site.data.theme_settings.dark_theme_settings.footer_color | default: "#2b2b40" }};
 	--dark-footer-link-color: {{ site.data.theme_settings.light_theme_settings.footer_link_color | default: "#999999" }};
