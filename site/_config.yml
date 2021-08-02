@@ -15,8 +15,7 @@ jekyll-archives:
 # or different production / staging locations.
 bookshop_locations:
   - ../bookshop_gem/components/
-  - ../bookshop_gem/
-  - ../components
+  - ../../cc-template-components/components/
 
 exclude:
   - postcss.config.js
