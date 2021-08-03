@@ -16,8 +16,6 @@ jekyll-archives:
 bookshop_locations:
   - ../bookshop_gem/components/
   - ../../cc-template-components/components/
-  - ../bookshop_gem/
-  - ../components
 
 exclude:
   - postcss.config.js
