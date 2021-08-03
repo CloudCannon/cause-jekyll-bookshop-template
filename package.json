@@ -3,7 +3,7 @@
   "private": true,
   "description": "An website template built by CloudCannon",
   "scripts": {
-    "bookshop-dev": "bookshop-browser -p 6061 -b ./components",
+    "bookshop-dev": "bookshop-browser -p 6061 -b ../cc-template-components/components",
     "bookshop-live": "bookshop-live -b ./bookshop_gem -o site/_cloudcannon/bookshop-live.js",
     "jekyll": "BUNDLE_GEMFILE=site/Gemfile bundle exec jekyll serve --source site --port 6060 --trace --unpublished",
     "start": "run-p bookshop-dev jekyll",
@@ -20,9 +20,9 @@
   },
   "homepage": "https://github.com/CloudCannon/hydra-jekyll-bookshop-template#readme",
   "devDependencies": {
-    "@bookshop/browser": "^2.0.0-beta.9",
-    "@bookshop/live": "^2.0.0-beta.9",
-    "@bookshop/jekyll-engine": "^2.0.0-beta.9",
+    "@bookshop/browser": "^2.0.0-beta.10",
+    "@bookshop/live": "^2.0.0-beta.10",
+    "@bookshop/jekyll-engine": "^2.0.0-beta.10",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.3.5",
     "postcss-cli": "^8.3.1",
