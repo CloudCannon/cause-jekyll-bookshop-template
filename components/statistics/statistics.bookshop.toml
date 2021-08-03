@@ -5,17 +5,17 @@ description = "A group of statistics"
 icon = "wysiwyg"
 tags = ["Content"]
 
-[props.statistics]
+[[props.statistics]]
 icon_image = ""
 heading = "Population"
 text = "New Zealand has a human population of just 4.5M while there are 70M sheep."
 
-[props.statistics]
+[[props.statistics]]
 icon_image = ""
 heading = "Economy"
 text = "Sheep are the backbone of the economy yet they receive no compensation."
 
-[props.statistics]
+[[props.statistics]]
 icon_image = ""
 heading = "Work Conditions"
 text = "Sheep are forced to eat grass every day of their life. How about some of variety?"
