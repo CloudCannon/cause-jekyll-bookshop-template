@@ -37,16 +37,9 @@
         <script type="text/javascript" src="/assets/js/dark-mode.js"></script>
 
         <!--
-            bookshop javascript loads the renderer for the local component library,
-            as well as the live component for CloudCannon live previews.
+            live component for CloudCannon live previews.
         -->
-        {% unless jekyll.environment == "production" %}
-            {% if jekyll.environment == "staging" %}
-                <script src="/assets/js/bookshop-live.js"></script>
-            {% else %}
-                <script src="http://localhost:6061/bookshop.js"></script>
-            {% endif %}
-        {% endunless %}
+        {% bookshop_live _cloudcannon/bookshop-live.js %}
     </div>
 </body>
 </html>
