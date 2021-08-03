@@ -2,7 +2,7 @@ theme: cc-template-components
 
 plugins:
   - jekyll-bookshop
-  - bookshop-array-structures
+  - cloudcannon-jekyll-bookshop
   - jekyll-postcss-v2
   - jekyll-archives
   - jekyll-feed
@@ -20,6 +20,9 @@ bookshop_locations:
 exclude:
   - postcss.config.js
   - node_modules
+
+include:
+  - _cloudcannon
 
 permalink: pretty
 
