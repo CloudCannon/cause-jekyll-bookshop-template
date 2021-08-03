@@ -1,5 +1,11 @@
 ---
 ---
+
+{%- assign theme_name = site.data.general_settings.website_theme_file | slugify | downcase -%}
+{%- assign theme_relative_url = theme_name | prepend: '_theme_files/' | append: ".md" -%}
+{%- assign theme_data = site.theme_files | where: 'relative_path', theme_relative_url | first -%}
+
+
 // Variables
 
 
@@ -11,46 +17,60 @@
     --s-design-min: 375;
     --s-design-max: 900;
 	// Light
-	--page-color: {{ site.data.theme_settings.light_theme_settings.page_color | default: "#ffffff" }};
-	--component-alt-color: {{ site.data.theme_settings.light_theme_settings.component_alt_color | default: "#f5f5f5" }};
-	--brand-color: {{ site.data.theme_settings.light_theme_settings.brand_color | default: "#4182e4" }};
-	--headings-color: {{ site.data.theme_settings.light_theme_settings.headings_color | default: "#000000" }};
-	--text-color: {{ site.data.theme_settings.light_theme_settings.text_color | default: "#666666" }};
-	--light-text-color: {{ site.data.theme_settings.light_theme_settings.light_text_color | default: "#ffffff" }};
-	--link-color: {{ site.data.theme_settings.light_theme_settings.link_color | default: "#00a4ca" }};
-	--button-fill: {{ site.data.theme_settings.light_theme_settings.button_fill_color | default: "#4182e4" }};
-	--button-fill-text: {{ site.data.theme_settings.light_theme_settings.button_fill_text_color | default: "#4182e4" }};
-	--tag-color: {{ site.data.theme_settings.light_theme_settings.tag_color | default: "#eeeeee" }};
-	--border-color: {{ site.data.theme_settings.light_theme_settings.border_color | default: "#dfdfdf" }};
-	--navigation-color: {{ site.data.theme_settings.light_theme_settings.navigation_color | default: "#fefefe" }};
-	--footer-color: {{ site.data.theme_settings.light_theme_settings.footer_color | default: "#2b2b40" }};
-	--footer-link-color: {{ site.data.theme_settings.light_theme_settings.footer_link_color | default: "#999999" }};
-	--footer-link-hover-color: {{ site.data.theme_settings.light_theme_settings.footer_link_hover_color | default: "#ffffff" }};
+	--page-color: {{ theme_data.light_theme_settings.page_color | default: "#ffffff" }};
+	--component-alt-color: {{ theme_data.light_theme_settings.component_alt_color | default: "#f5f5f5" }};
+	--brand-color: {{ theme_data.light_theme_settings.brand_color | default: "#4182e4" }};
+	--headings-color: {{ theme_data.light_theme_settings.headings_color | default: "#000000" }};
+	--text-color: {{ theme_data.light_theme_settings.text_color | default: "#666666" }};
+	--light-text-color: {{ theme_data.light_theme_settings.light_text_color | default: "#ffffff" }};
+	--link-color: {{ theme_data.light_theme_settings.link_color | default: "#00a4ca" }};
+	--button-fill: {{ theme_data.light_theme_settings.button_fill_color | default: "#4182e4" }};
+	--button-fill-text: {{ theme_data.light_theme_settings.button_fill_text_color | default: "#4182e4" }};
+	--tag-color: {{ theme_data.light_theme_settings.tag_color | default: "#eeeeee" }};
+	--border-color: {{ theme_data.light_theme_settings.border_color | default: "#dfdfdf" }};
+	--navigation-color: {{ theme_data.light_theme_settings.navigation_color | default: "#fefefe" }};
+	--footer-color: {{ theme_data.light_theme_settings.footer_color | default: "#2b2b40" }};
+	--footer-link-color: {{ theme_data.light_theme_settings.footer_link_color | default: "#999999" }};
+	--footer-link-hover-color: {{ theme_data.light_theme_settings.footer_link_hover_color | default: "#ffffff" }};
 	// Dark
-	--dark-page-color: {{ site.data.theme_settings.dark_theme_settings.page_color | default: "#ffffff" }};
-	--dark-component-alt-color: {{ site.data.theme_settings.dark_theme_settings.component_alt_color | default: "#f5f5f5" }};
-	--dark-brand-color: {{ site.data.theme_settings.dark_theme_settings.brand_color | default: "#4182e4" }};
-	--dark-headings-color: {{ site.data.theme_settings.dark_theme_settings.headings_color | default: "#000000" }};
-	--dark-text-color: {{ site.data.theme_settings.dark_theme_settings.text_color | default: "#666666" }};
-	--dark-light-text-color: {{ site.data.theme_settings.light_theme_settings.light_text_color | default: "#ffffff" }};
-	--dark-link-color: {{ site.data.theme_settings.dark_theme_settings.link_color | default: "#00a4ca" }};
-	--dark-button-fill: {{ site.data.theme_settings.dark_theme_settings.button_fill_color | default: "#4182e4" }};
-	--dark-button-fill-text: {{ site.data.theme_settings.dark_theme_settings.button_fill_text_color | default: "#4182e4" }};
-	--dark-tag-color: {{ site.data.theme_settings.dark_theme_settings.tag_color | default: "#444444" }};
-	--dark-border-color: {{ site.data.theme_settings.light_theme_settings.border_color | default: "#dfdfdf" }};
-	--dark-navigation-color: {{ site.data.theme_settings.dark_theme_settings.navigation_color | default: "#202020" }};
-	--dark-footer-color: {{ site.data.theme_settings.dark_theme_settings.footer_color | default: "#2b2b40" }};
-	--dark-footer-link-color: {{ site.data.theme_settings.light_theme_settings.footer_link_color | default: "#999999" }};
-	--dark-footer-link-hover-color: {{ site.data.theme_settings.light_theme_settings.footer_link_hover_color | default: "#ffffff" }};
+	--dark-page-color: {{ theme_data.dark_theme_settings.page_color | default: "#ffffff" }};
+	--dark-component-alt-color: {{ theme_data.dark_theme_settings.component_alt_color | default: "#f5f5f5" }};
+	--dark-brand-color: {{ theme_data.dark_theme_settings.brand_color | default: "#4182e4" }};
+	--dark-headings-color: {{ theme_data.dark_theme_settings.headings_color | default: "#000000" }};
+	--dark-text-color: {{ theme_data.dark_theme_settings.text_color | default: "#666666" }};
+	--dark-light-text-color: {{ theme_data.light_theme_settings.light_text_color | default: "#ffffff" }};
+	--dark-link-color: {{ theme_data.dark_theme_settings.link_color | default: "#00a4ca" }};
+	--dark-button-fill: {{ theme_data.dark_theme_settings.button_fill_color | default: "#4182e4" }};
+	--dark-button-fill-text: {{ theme_data.dark_theme_settings.button_fill_text_color | default: "#4182e4" }};
+	--dark-tag-color: {{ theme_data.dark_theme_settings.tag_color | default: "#444444" }};
+	--dark-border-color: {{ theme_data.light_theme_settings.border_color | default: "#dfdfdf" }};
+	--dark-navigation-color: {{ theme_data.dark_theme_settings.navigation_color | default: "#202020" }};
+	--dark-footer-color: {{ theme_data.dark_theme_settings.footer_color | default: "#2b2b40" }};
+	--dark-footer-link-color: {{ theme_data.light_theme_settings.footer_link_color | default: "#999999" }};
+	--dark-footer-link-hover-color: {{ theme_data.light_theme_settings.footer_link_hover_color | default: "#ffffff" }};
 
-
-	--body-font: {{ site.data.theme_settings.body_font }};
-	--content-font-size: {{ site.data.theme_settings.content_font_size_number }}em;
-
+	--body-font: {{ theme_data.body_font }};
+	--content-font-size: {{ theme_data.content_font_size_number }}em;
 }
 
 
 {% bookshop_scss %}
 
 @import "site";
-@import "cms-styles.css"
+@import './navigation';
+@import './footer';
+@import './archive-layout';
+@import "cms-styles.css";
+
+
+// This is required for CloudCannon Themes. Users can create their own themes, but CloudCannon 
+// themes are structurally different so these files are necessary.
+
+{% case theme_name %}
+	{% when "hydra" %}
+		@import './theme-files/hydra.scss';
+	{% when "justice" %}
+		@import './theme-files/justice.scss';
+	{% when "cause" %}
+		@import './theme-files/cause.scss';
+{% endcase %}
