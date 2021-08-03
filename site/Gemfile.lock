@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: https://github.com/cloudcannon/cc-template-components.git
-  revision: 788e8e1c59e8dc4746fa50c8cca8a6e6f2d553fa
+  revision: 0cf27ee8de5d59bebe1074bb668bc5bcf10a8405
   branch: main
   specs:
     cc-template-components (0.1.0)
@@ -52,7 +52,7 @@ GEM
       terminal-table (~> 2.0)
     jekyll-archives (2.2.1)
       jekyll (>= 3.6, < 5.0)
-    jekyll-bookshop (2.0.0.pre.alpha.18)
+    jekyll-bookshop (2.0.0.pre.beta.5)
       dry-inflector (>= 0.1, < 1.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-feed (0.15.1)

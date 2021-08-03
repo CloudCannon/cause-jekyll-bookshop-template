@@ -2,8 +2,12 @@ source "https://rubygems.org"
 
 
 group :jekyll_plugins do
-  # gem 'cc-template-components', :path => '../../cc-template-components' Use this for local development, and comment out the github reference
-  gem 'cc-template-components', git: "https://github.com/cloudcannon/cc-template-components.git", :branch => 'main' # Use this for production and comment out local reference
+  # Use this for local development, and comment out the github reference
+  # gem 'cc-template-components', :path => '../../cc-template-components'
+
+  # Use this for production and comment out local reference
+  gem 'cc-template-components', git: "https://github.com/cloudcannon/cc-template-components.git", :branch => 'main' 
+  
   gem "jekyll-bookshop", ">= 2.0.0.pre.alpha"
   gem "bookshop-array-structures", ">= 2.0.0.pre.alpha"
   gem 'jekyll-watch', :git => "https://github.com/CloudCannon/jekyll-watch"

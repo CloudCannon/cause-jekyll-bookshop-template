@@ -1,3 +1,4 @@
+---
 light_theme_settings:
   page_color: "#ffffff"
   component_alt_color: "rgb(248, 250, 251)"
@@ -32,3 +33,4 @@ dark_theme_settings:
   footer_link_hover_color: '#73a9c9'
 body_font: 'Open Sans'
 content_font_size_number: 2.1
+---
