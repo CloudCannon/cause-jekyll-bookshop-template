@@ -1,1 +1,0 @@
-// Home of future bookshop configuration
