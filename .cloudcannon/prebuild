@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 GEM_LOC=$(bundle info --path cc-template-components) && ln -sfn $GEM_LOC bookshop_gem
+
 npm install
 
 npm run bookshop-live
