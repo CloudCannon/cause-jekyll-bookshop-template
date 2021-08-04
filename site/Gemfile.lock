@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: https://github.com/cloudcannon/cc-template-components.git
-  revision: c0b5ac3a10693fd77792910fa492005b8effccd3
+  revision: dc24c30e8b80c0032a2e8a0f4634a8dfd50dd274
   branch: main
   specs:
     cc-template-components (0.1.0)
