@@ -1,8 +1,8 @@
-{% if page.content_blocks.size > 0 %}
-    <div class="c-page theme-{{ page.page_theme | slugify | default: 'dark' }}">
+{% if include.content_blocks.size > 0 %}
+    <div class="c-page theme-{{ include.page_theme | slugify | default: 'dark' }}">
 
     {% assign block_count = 0 %}
-    {% for block in page.content_blocks %}
+    {% for block in include.content_blocks %}
         <div class="cms-editor-link 
                     component-wrapper
                     {% if block._alt %}
