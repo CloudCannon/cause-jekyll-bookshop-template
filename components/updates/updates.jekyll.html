@@ -1,0 +1,20 @@
+{% assign c = "c-updates" %}
+
+{% if include.show_staff %}
+	<div class="{{c}} 
+				component">
+		<h3 class="{{c}}__heading">{{ include.heading }}</h3>
+		<div class="{{c}}__wrapper">
+			{% for update in include.updates %}
+				<div class="{{c}}__update">
+					<img src="{{ update.image }}" alt="{{ update.title }}" />
+					<div class="{{c}}__content-wrapper">
+						<p class="{{c}}__date">{{ update.date }}</p>
+						<p class="{{c}}__title">{{ update.title }}</p>
+						<p class="{{c}}__content">{{ update.content_text }}</p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endif %}

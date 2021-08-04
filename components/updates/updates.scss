@@ -1,0 +1,42 @@
+.c-updates {
+	&__heading {
+		text-align: center;
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+		grid-gap: 25px;
+	}
+
+	&__update {
+		border: 1px solid var(--border-color);
+		background: var(--page-color);
+		border-radius: 3px;
+	}
+
+	&__image {
+		height: 200px;
+		background-position: center;
+		background-size: cover;
+		border-top-right-radius: 3px;
+		border-top-left-radius: 3px;
+	}
+
+	&__content-wrapper {
+		padding: 20px;
+	}
+
+	&__date {
+		color: var(--light-text-color);
+		font-size: 1.7em;
+	}
+
+	&__title {
+		font-size: 2.4em;
+	}
+
+	&__content {
+
+	}
+}

@@ -4,9 +4,8 @@
 
     &__content-wrapper {
         margin: 0 auto;
-        padding: 0 var(--s-20-40);
+        padding: var(--component-padding) var(--s-20-40);
         max-width: 1024px;
-        font-size: var(--content-font-size);
 
         & >:first-child {
             margin-top: 0;
@@ -14,6 +13,13 @@
         
         & >:last-child {
             margin-bottom: 0;
+        }
+
+        .cms-embed {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: var(--component-padding) 0;
         }
     }
 }
