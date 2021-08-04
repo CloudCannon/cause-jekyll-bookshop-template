@@ -2,8 +2,16 @@
 GEM_LOC=$(bundle info --path cc-template-components) && ln -sfn $GEM_LOC bookshop_gem
 echo "- - - - - - - - - - -"
 echo $GEM_LOC
+echo "- - - - - - - - - - -"
 ls
+echo "- - - - - - - - - - -"
 ls bookshop_gem
+echo "- - - - - - - - - - -"
+cd bookshop_gem/components
+ls
+echo "- - - - - - - - - - -"
+cd bookshop
+ls
 echo "- - - - - - - - - - -"
 npm install
 
