@@ -8,7 +8,7 @@
 			<div class="{{c}}__update">
 				<img src="{{ update.image }}" alt="{{ update.title }}" />
 				<div class="{{c}}__content-wrapper">
-					<p class="{{c}}__date">{{ update.date }}</p>
+					<p class="{{c}}__date">{{ update.date | date: "%B %-d, %Y" }}</p>
 					<p class="{{c}}__title">{{ update.title }}</p>
 					<p class="{{c}}__content">{{ update.content_text }}</p>
 				</div>

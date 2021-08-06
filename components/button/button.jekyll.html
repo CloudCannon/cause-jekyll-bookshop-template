@@ -15,10 +15,15 @@ items below
 		<span class="{{n}}__label">{{ include.label }}</span>
 	</a>
 {% else %}
+	{% if include.label %}
+		{% assign label = include.label %}
+	{% else %}
+		{% assign label = "Send Message" %}
+	{% endif %}
 	<div class="{{n}}
 				{{n}}--{{ include.variant | slugify | default: 'filled' }}">
 		<input class="{{n}}__label"
 			   type="submit" 
-			   value="Send Message" />
+			   value="{{ label }}" />
 	</div>
 {% endunless %}

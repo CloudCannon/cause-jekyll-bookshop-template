@@ -1,12 +1,15 @@
 .c-updates {
+	padding: var(--component-padding) 0;
+
 	&__heading {
+		margin-bottom: var(--component-padding);
 		text-align: center;
 	}
 
 	&__wrapper {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
-		grid-gap: 25px;
+		grid-gap: 30px;
 	}
 
 	&__update {
@@ -28,15 +31,18 @@
 	}
 
 	&__date {
-		color: var(--light-text-color);
-		font-size: 1.7em;
+		font-size: 1.76em;
+		font-weight: 700;
+		opacity: 0.5;
 	}
 
 	&__title {
+		margin: 20px 0;
 		font-size: 2.4em;
+		color: #000;
 	}
 
 	&__content {
-
+		font-size: 1.76em;
 	}
 }
