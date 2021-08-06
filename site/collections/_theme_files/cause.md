@@ -12,9 +12,9 @@ light_theme_settings:
   tag_color: '#eeeeee'
   border_color: '#dfdfdf'
   navigation_color: '#FEFEFE'
-  footer_color: '#fefefe'
-  footer_link_color: '#3A4145'
-  footer_link_hover_color: '#73a9c9'
+  footer_color: '#000000'
+  footer_link_color: 'rgb(136, 136, 136)'
+  footer_link_hover_color: '#ffffff'
 dark_theme_settings:
   page_color: "#131313"
   component_alt_color: "#1a1a1a"

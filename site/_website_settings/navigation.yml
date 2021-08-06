@@ -1,5 +1,11 @@
 logo_image: /images/svg/nav-logo.svg
 navigation_items:
-  - label:
-    link_url:
+  - label: Home
+    link_url: /
+    link_type:
+  - label: Home
+    link_url: /iyg
+    link_type:
+  - label: Home
+    link_url: /pij
     link_type:
