@@ -55,22 +55,22 @@
 
 
 {% bookshop_scss %}
-
-@import "site";
-@import './navigation';
-@import './footer';
-@import './archive-layout';
-@import "cms-styles.css";
-
+{% include sass/navigation.scss %}
+{% include sass/site.scss %}
+{% include sass/footer.scss %}
+{% include sass/archive-layout.scss %}
 
 // This is required for CloudCannon Themes. Users can create their own themes, but CloudCannon 
 // themes are structurally different so these files are necessary.
 
 {% case theme_name %}
 	{% when "hydra" %}
-		@import './theme-files/hydra.scss';
+		{% include sass/theme-files/hydra.scss %}
 	{% when "justice" %}
-		@import './theme-files/justice.scss';
+		{% include sass/theme-files/justice.scss %}
 	{% when "cause" %}
-		@import './theme-files/cause.scss';
+		{% include sass/theme-files/cause.scss %}
 {% endcase %}
+
+@import "cms-styles.css";
+
