@@ -1,11 +1,6 @@
 ---
 ---
-
-{%- assign theme_name = site.data.general_settings.website_theme_file | slugify | downcase -%}
-{%- assign theme_relative_url = theme_name | prepend: '_theme_files/' | append: ".md" -%}
-{%- assign theme_data = site.theme_files | where: 'relative_path', theme_relative_url | first -%}
-
-
+{%- include theme.html -%}
 // Variables
 
 
