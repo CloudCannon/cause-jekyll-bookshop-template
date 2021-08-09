@@ -1,9 +1,11 @@
 theme: cc-template-components
 
-website_themes:
-  - 'Hydra'
-  - 'Justice'
-  - 'Cause'
+cloudcannon:
+  _select_data:
+    website_themes:
+      - 'Hydra'
+      - 'Justice'
+      - 'Cause'
 
 plugins:
   - jekyll-bookshop
