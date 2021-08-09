@@ -30,10 +30,10 @@
     <link rel="icon" sizes="128x128" href="{{ site.data.general_settings.icons.small_mobile_icon_image }}" />
     <link rel="icon" sizes="256x256" href="{{ site.data.general_settings.icons.large_mobile_icon_image }}" />
 
-    {% if site.data.theme_settings.body_font %}
-        {% assign fonts = site.data.theme_settings.body_font | replace: ', ', '|' 
-                                                             | replace: ',', '|' 
-                                                             | replace: ' ', '+' %}
+    {% if theme_data.body_font %}
+        {% assign fonts = theme_data.body_font | replace: ', ', '|' 
+                                               | replace: ',', '|' 
+                                               | replace: ' ', '+' %}
         <link rel="stylesheet" 
               href="//fonts.googleapis.com/css?family={{ fonts }}:400,400i,700,700i">
         
