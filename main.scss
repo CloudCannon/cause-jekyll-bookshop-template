@@ -23,6 +23,7 @@
 	--button-fill-text: {{ theme_data.light_theme_settings.button_fill_text_color | default: "#4182e4" }};
 	--tag-color: {{ theme_data.light_theme_settings.tag_color | default: "#eeeeee" }};
 	--border-color: {{ theme_data.light_theme_settings.border_color | default: "#dfdfdf" }};
+	--shadows-color: {{ theme_data.light_theme_settings.shadows_color | default: "#2b2b40" }};
 	--navigation-color: {{ theme_data.light_theme_settings.navigation_color | default: "#fefefe" }};
 	--footer-color: {{ theme_data.light_theme_settings.footer_color | default: "#2b2b40" }};
 	--footer-link-color: {{ theme_data.light_theme_settings.footer_link_color | default: "#999999" }};
@@ -38,11 +39,12 @@
 	--dark-button-fill: {{ theme_data.dark_theme_settings.button_fill_color | default: "#4182e4" }};
 	--dark-button-fill-text: {{ theme_data.dark_theme_settings.button_fill_text_color | default: "#4182e4" }};
 	--dark-tag-color: {{ theme_data.dark_theme_settings.tag_color | default: "#444444" }};
-	--dark-border-color: {{ theme_data.light_theme_settings.border_color | default: "#dfdfdf" }};
+	--dark-border-color: {{ theme_data.dark_theme_settings.border_color | default: "#dfdfdf" }};
+	--dark-shadows-color: {{ theme_data.dark_theme_settings.shadows_color | default: "#2b2b40" }};
 	--dark-navigation-color: {{ theme_data.dark_theme_settings.navigation_color | default: "#202020" }};
 	--dark-footer-color: {{ theme_data.dark_theme_settings.footer_color | default: "#2b2b40" }};
-	--dark-footer-link-color: {{ theme_data.light_theme_settings.footer_link_color | default: "#999999" }};
-	--dark-footer-link-hover-color: {{ theme_data.light_theme_settings.footer_link_hover_color | default: "#ffffff" }};
+	--dark-footer-link-color: {{ theme_data.dark_theme_settings.footer_link_color | default: "#999999" }};
+	--dark-footer-link-hover-color: {{ theme_data.dark_theme_settings.footer_link_hover_color | default: "#ffffff" }};
 
 	--body-font: {{ theme_data.body_font }};
 	--content-font-size: {{ theme_data.content_font_size_number }}em;
@@ -66,6 +68,8 @@
 	{% when "cause" %}
 		{% include sass/theme-files/cause.scss %}
 {% endcase %}
+
+{% include sass/dark-styles.scss %}
 
 @import "cms-styles.css";
 
