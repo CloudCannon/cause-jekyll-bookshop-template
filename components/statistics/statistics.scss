@@ -15,7 +15,7 @@
 	&__stat {
 		position: relative;
 		margin: 45px 0 0 0;
-		border: 1px solid #dfdfdf;
+		border: 1px solid var(--border-color);
 		border-radius: 3px;
 		padding: 0 20px 25px 20px;
 		text-align: center;
@@ -33,7 +33,7 @@
 		padding: 10px;
 		max-width: 68px;
 		max-height: 68px;
-		box-shadow: 2px 7px 39px 9px #f7f7f7;
+		box-shadow: 2px 7px 39px 9px var(--shadows-c);
 		border-radius: 50px;
 		background-color: var(--page-color);
 
