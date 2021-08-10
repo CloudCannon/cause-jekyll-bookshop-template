@@ -1,0 +1,20 @@
+body {
+    &.dark {
+        --page-color: var(--dark-page-color);
+        --component-alt-color: var(--dark-component-alt-color);
+        --brand-color: var(--dark-brand-color);
+        --headings-color: var(--dark-headings-color);
+        --text-color: var(--dark-text-color);
+        --light-text-color: var(--dark-light-text-color);
+        --link-color: var(--dark-link-color);
+        --button-fill: var(--dark-button-fill);
+        --button-fill-text: var(--dark-button-fill-text);
+        --tag-color: var(--dark-tag-color);
+        --border-color: var(--dark-border-color);
+        --shadows-color: var(--dark-shadows-color);
+        --navigation-color: var(--dark-navigation-color);
+        --footer-color: var(--dark-footer-color);
+        --footer-link-color: var(--dark-footer-link-color);
+        --footer-link-hover-color: var(--dark-footer-link-hover-color);
+    }
+}
