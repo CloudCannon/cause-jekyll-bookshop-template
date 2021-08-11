@@ -17,7 +17,7 @@ body {
 }
 
 .body-wrapper {
-   padding-top: calc(100px + var(--navigation-offset));
+	padding-top: 0;
 }
 
 .c-navigation {
@@ -25,6 +25,12 @@ body {
 	right: 0;
 	margin: 0 auto;
 	max-width: var(--breakpoint-max);
+
+	&--open {
+		.body-wrapper {
+			 padding: 0;
+		}
+	}
 
 	&__item {
 		color: var(--text-color);
@@ -37,6 +43,10 @@ body {
 			text-transform: none;
 		}
 	}
+}
+
+.c-page {
+   padding-top: calc(30px + var(--navigation-offset));
 }
 
 .c-image-and-text-blocks {
