@@ -40,8 +40,11 @@
 			width: 100%;
 			box-sizing: border-box;
 			outline: none;
-			border: 1px solid #DDDDDD;
+			border: 1px solid var(--border-color);
 			font-size: 1.6em;
+			background-color: transparent;
+			color: inherit;
+			border-radius: 4px;
 		}
 
 		input {
