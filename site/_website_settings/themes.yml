@@ -27,12 +27,13 @@ hydra:
     button_fill_color: "#737373"
     button_fill_text_color: "#ffffff"
     tag_color: '#444444'
-    border_color: '#dfdfdf'
+    border_color: '#686868'
     shadows_color: '#f7f7f7'
     navigation_color: '#202020'
     footer_color: '#000000'
     footer_link_color: '#999999'
     footer_link_hover_color: '#ffffff'
+  headings_font: 'San Francisco'
   body_font: 'San Francisco'
   content_font_size_number: 2.2
 justice:
@@ -70,6 +71,7 @@ justice:
     footer_color: '#fefefe'
     footer_link_color: '#3A4145'
     footer_link_hover_color: '#73a9c9'
+  headings_font: 'Quattrocento'
   body_font: 'Vollkorn'
   content_font_size_number: 2.25
 cause:
@@ -107,5 +109,6 @@ cause:
     footer_color: '#222222'
     footer_link_color: '#ffffff'
     footer_link_hover_color: '#73a9c9'
+  headings_font: 'Open Sans'
   body_font: 'Open Sans'
   content_font_size_number: 2.1
