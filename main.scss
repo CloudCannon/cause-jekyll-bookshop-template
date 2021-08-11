@@ -46,6 +46,7 @@
 	--dark-footer-link-color: {{ theme_data.dark_theme_settings.footer_link_color | default: "#999999" }};
 	--dark-footer-link-hover-color: {{ theme_data.dark_theme_settings.footer_link_hover_color | default: "#ffffff" }};
 
+	--headings-font: {{ theme_data.headings_font }};
 	--body-font: {{ theme_data.body_font }};
 	--content-font-size: {{ theme_data.content_font_size_number }}em;
 }
