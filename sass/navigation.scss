@@ -63,6 +63,7 @@
 
 	&__item-wrapper {
 		display: flex;
+		font-size: 10px;
 
 		@media (max-width: 700px) {
 			width: 100%;

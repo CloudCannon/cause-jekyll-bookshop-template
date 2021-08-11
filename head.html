@@ -30,12 +30,15 @@
     <link rel="icon" sizes="128x128" href="{{ site.data.general_settings.icons.small_mobile_icon_image }}" />
     <link rel="icon" sizes="256x256" href="{{ site.data.general_settings.icons.large_mobile_icon_image }}" />
 
-    {% if theme_data.body_font %}
-        {% assign fonts = theme_data.body_font | replace: ', ', '|' 
+    {% if theme_data.headings_font or theme_data.body_font %}
+        {% assign heading_fonts = theme_data.headings_font | replace: ', ', '|' 
+                                               | replace: ',', '|' 
+                                               | replace: ' ', '+' %}
+        {% assign body_fonts = theme_data.body_font | replace: ', ', '|' 
                                                | replace: ',', '|' 
                                                | replace: ' ', '+' %}
         <link rel="stylesheet" 
-              href="//fonts.googleapis.com/css?family={{ fonts }}:400,400i,700,700i">
+              href="//fonts.googleapis.com/css?family={% if heading_fonts %}{{ heading_fonts }}{% if body_fonts %}|{% endif %}{% endif %}{{ body_fonts }}:400,400i,700,700i">
         
     {% endif %}
 </head>

@@ -11,8 +11,8 @@ body {
 
     h1, h2 {
         font-size: 3.6em;
-        font-family: 'Quattrocento';
-        font-weight: 600;
+        font-family: var(--headings-fonts);
+        font-weight: 500;
     }
 
     h3 {
@@ -251,6 +251,7 @@ body {
             border: 0;
             border-radius: 2px;
             font-family: var(--body-font);
+            background-color: #ffffff;
 
             &::placeholder {
                 opacity: 0;
@@ -363,6 +364,7 @@ body {
 }
 
 .c-footer {
+    padding-top: var(--component-padding);
 
     &__columns {
     }
