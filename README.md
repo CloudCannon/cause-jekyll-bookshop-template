@@ -3,7 +3,7 @@
 Not for profit themed template for Jekyll. Browse through a [live demo](https://spiffy-door.cloudvent.net/).
 Increase the web presence of a not for profit or cause website with this configurable theme.
 
-![Cause template screenshot](images/_screenshot.png)
+![Cause template screenshot](/_screenshot.png)
 
 Cause was made by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll and Hugo.
 The component library is built and maintained for use with [Bookshop](https://github.com/cloudcannon/bookshop/)
