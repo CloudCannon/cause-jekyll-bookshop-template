@@ -1,9 +1,159 @@
 ---
 title: Component Test
 content_blocks:
+  - _bookshop_name: staff-list
+    show_staff: true
+  - _bookshop_name: map
+    google_maps_api_key:
+    map:
+      latitude: '-45.8779128'
+      longitude: '170.5026709'
+      address: 1 Bond Street, Dunedin, New Zealand
+      zoom: '13'
+  - _bookshop_name: reviews
+    heading: Reviews
+    content_html: >-
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.</p>
+    reviews:
+      - name: Reviewer
+        review_text: Text
+        image: /images/_screenshot.jpg
+      - name: Reviewer
+        review_text: Text
+        image: /images/_screenshot.jpg
+      - name: Reviewer
+        review_text: Text
+        image: /images/_screenshot.jpg
+  - _bookshop_name: quote
+    image: /images/_screenshot.jpg
+    quote_text: >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    name: Name
+    role: Role
+    _alt: true
+  - _bookshop_name: contact-form
+    heading: Contact Form
+    lower_text: >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    form_submission_email: test@test.com
+    company_details:
+      address: Address
+      postal_address: Address
+      phone: Number
+      email: Email
+  - _bookshop_name: contact-cards
+    heading: Contact Cards
+    content_html: >-
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.</p>
+    contacts:
+      - image: /images/_screenshot.jpg
+        name: Name
+        role: Role
+        number: 16549879
+        phone_extension_number: 1
+        description: >-
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+      - image: /images/_screenshot.jpg
+        name: Name
+        role: Role
+        number: 16549879
+        phone_extension_number: 1
+        description: >-
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+      - image: /images/_screenshot.jpg
+        name: Name
+        role: Role
+        number: 16549879
+        phone_extension_number: 1
+        description: >-
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+  - _bookshop_name: image-and-text-blocks
+    blocks:
+      - heading_html: <p>Heading</p>
+        content_html: >-
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.</p>
+        image: /images/_screenshot.jpg
+        content_arrangement: Right
+        button:
+          button_label: Button Transparent
+          button_link_url: /
+          button_variant: Transparent
+      - heading_html: <p>Heading</p>
+        content_html: >-
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.</p>
+        image: /images/_screenshot.jpg
+        content_arrangement: Left
+        button:
+          button_label: Button Filled
+          button_link_url: /
+          button_variant: Filled
+  - _bookshop_name: header-with-image
+    heading_html: <p>Header with image</p>
+    subheading_html: <p>Subheading</p>
+    text_color: '#e97474'
+    content_alignment: Center
+    button_label: Button
+    button_link_url: /
+    button_variant: Filled
+    image: /images/_screenshot.jpg
 SEO_options:
   title:
   description:
   image:
   prevent_indexing: false
 ---
+
