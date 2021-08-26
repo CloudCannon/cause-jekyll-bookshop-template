@@ -1,8 +1,9 @@
 .archive-layout {
+	margin: 0 auto;
 	background: var(--page-color);
 
 	&__heading {
-		padding: var(--component-padding) var(--s-20-40) 0 var(--s-20-40);
+		padding: var(--component-padding) var(--s-30-50) 0 var(--s-30-50);
 		text-align: center;
 	}
 

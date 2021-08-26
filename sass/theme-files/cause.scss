@@ -21,6 +21,7 @@ body {
 }
 
 .c-navigation {
+	position: relative;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
@@ -46,7 +47,7 @@ body {
 }
 
 .c-page {
-   padding-top: calc(30px + var(--navigation-offset));
+   // padding-top: calc(30px + var(--navigation-offset));
 }
 
 .c-image-and-text-blocks {
@@ -92,14 +93,16 @@ body {
 }
 
 .c-quote { $c: &;
-	display: flex;
-	flex-direction: column-reverse;
-	padding-top: calc(40px + var(--component-padding));
-	padding: var(--component-padding) var(--s-20-40);
+	&__inner-wrapper {
+		display: flex;
+		flex-direction: column-reverse;
+		padding-top: calc(40px + var(--component-padding));
+		padding: var(--component-padding) var(--s-30-50);
 
-	@media (max-width: 650px) {
-		#{$c}__content-wrapper {
-			padding: 30px var(--s-20-40);
+		@media (max-width: 650px) {
+			#{$c}__content-wrapper {
+				padding: 30px var(--s-30-50);
+			}
 		}
 	}
 
@@ -130,7 +133,7 @@ body {
 		box-shadow: 0 20px 100px 0 rgba(0, 0, 0, 0.1);
 		text-align: center;
 		box-sizing: content-box;
-		background-color: #ffffff;
+		background-color: var(--component-color);
 
 		&:before {
 			content: "\201C";
@@ -168,8 +171,6 @@ body {
 	}
 
 	&__quote {
-		color: #000000;
-
 		&:before {
 			display: none;
 		}
@@ -182,13 +183,19 @@ body {
 }
 
 .c-call-to-action-mailing-list .n-button {
-	@media (max-width: 650px) {
-		padding: 16px 15px;
+	&__inner-wrapper {
+		@media (max-width: 650px) {
+			padding: 16px 15px;
+		}
 	}
 }
 
 .c-footer {
 	padding-bottom: 0;
+
+	@media (max-width: 650px) {
+		padding: 50px var(--s-30-50);
+	}
 
 	&__column li {
 		padding: 0 25px;
@@ -205,4 +212,14 @@ body {
 	}
 }
 
+body.dark {
+	.c-quote.component-wrapper--light {
+		.c-quote__content-wrapper {
+			background-color: var(--dark-component-color);
 
+			&:after {
+				border-color: var(--dark-component-color) transparent;
+			}
+		}
+	}
+}

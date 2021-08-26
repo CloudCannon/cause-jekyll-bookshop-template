@@ -1,6 +1,7 @@
 body {
     font-size: 10px;
     color: var(--text-color);
+    --breakpoint-max: 960px;
 
     h1, h2, h3, h4, h5, h6 {
         letter-spacing: 0.18em;
@@ -23,37 +24,51 @@ body {
         color: var(--text-color);
     }
 
-    .c-navigation { $c: &;
-        
-        @media (max-width: 700px) {
-            &__inner-wrapper {
-                align-items: center;
-             }
+    
+}
+.c-navigation { $c: &;
+    display: block;
+    align-items: unset;
 
-             &__nav-items {
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: center;;
-             }
+    a.c-navigation__item--button {
+        padding: 0 4px;
+    }
+    
+    @media (max-width: 700px) {
+        &__inner-wrapper {
+            align-items: center;
+         }
 
-             &__item-wrapper {
-                width: auto;
-             }
+         &__nav-items {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;;
+         }
 
-             &__item {
-                opacity: 1;
-            }
+         &__item-wrapper {
+            width: auto;
+            height: auto;
+         }
+
+         &__item {
+            opacity: 1;
+            pointer-events: all;
         }
-       
 
-        &__item {
-
-            &--mobile-toggle {
-                font-size: 2.4em;
-            }
+        &__title {
+            width: 100%;
+            text-align: center;
         }
     }
-}
+   
+
+    &__item {
+
+        &--mobile-toggle {
+            font-size: 2.4em;
+        }
+    }
+}      
 
 .body-wrapper {
     padding-top: 0;
@@ -70,37 +85,36 @@ body {
 
 .component-wrapper {
     position: relative;
-    background-color: var(--component-alt-color);
 
-    &:first-child {
-        background-color: var(--page-color);
-    }
+    // &:first-child {
+    //     background-color: var(--page-color);
+    // }
 
-    &--alt {
-        background-color: var(--page-color);
-        box-shadow: inset 0px 15px 15px -15px rgba(100, 100, 100, 0.4);
-    }
+    // &--alt {
+    //     background-color: var(--page-color);
+    //     box-shadow: inset 0px 15px 15px -15px rgba(100, 100, 100, 0.4);
+    // }
 
-    &--branded {
-        background-color: var(--brand-color);
-        box-shadow: inset 0px 15px 15px -15px rgba(0, 0, 0, 0.5);
-    }
+    // &--branded {
+    //     background-color: var(--brand-color);
+    //     box-shadow: inset 0px 15px 15px -15px rgba(0, 0, 0, 0.5);
+    // }
 }
 
-.component-attributes {
-    &:after {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 25px;
-        box-shadow: inset 0px 15px 15px -15px rgba(100, 100, 100, 0.2);
-        content: '';
-        pointer-events: none;
-    }
+// .component-attributes {
+//     &:after {
+//         display: block;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         height: 25px;
+//         box-shadow: inset 0px 15px 15px -15px rgba(100, 100, 100, 0.2);
+//         content: '';
+//         pointer-events: none;
+//     }
     
-}
+// }
 
 .c-navigation {
     position: relative;
@@ -220,8 +234,20 @@ body {
     }
 }
 
+.c-contact-cards {
+    &__card {
+        background-color: var(--component-color);
+    }
+}
+
+.c-reviews {
+    &__review-content {
+        background-color: var(--component-color);
+    }
+}
+
 .c-contact-form {
-    &__wrapper {
+    &__inner-wrapper {
         justify-content: flex-start;
         max-width: 1000px;
     }
@@ -267,25 +293,31 @@ body {
 }
 
 .c-posts-list {
+    &__inner-wrapper {
+        max-width: 960px;
+    }
+
+    .n-post-preview__inner-wrapper:last-child {
+        padding-bottom: 20px;
+    }
+
     &__heading, &__content {
         text-align: left;
     }
-
-    &__wrapper {
-        max-width: 960px;
-
-        .c-post-preview:last-child {
-            padding-bottom: 20px;
-        }
-    }
 }
 
-.c-post-preview {
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #fefefe;
-    box-shadow: 1px 1px 5px 0 rgba(100, 100, 100, 0.2);
-    border-radius: 2px;
+.n-post-preview {
+    &__inner-wrapper {
+        margin-bottom: 30px;
+        padding: 20px;
+        background-color: var(--component-color);
+        box-shadow: 1px 1px 5px 0 rgba(100, 100, 100, 0.2);
+        border-radius: 2px;
+
+        .n-button {
+            display: none;
+        }
+    }
 
     &__top {
         display: flex;
@@ -295,13 +327,9 @@ body {
     &__preview-image {
         display: block;
     }
-
-    .n-button {
-        display: none;
-    }
 }
 
-.c-post-header {
+.n-post-header {
     flex: 1 225px;
 
     &__heading {
@@ -375,6 +403,7 @@ body {
             margin: 0 0 30px 0;
             max-width: none;;
             text-transform: uppercase;
+            font-weight: 500;
         }
 
         li {
@@ -410,11 +439,20 @@ body {
     }
 
     .c-author-card {
-        display: flex;
-        align-items: flex-start;
-        width: 100%;
-        padding: 20px;
-        background-color: #fefefe;
+        &__inner-wrapper {
+            display: flex;
+            align-items: flex-start;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        &__content {
+            padding: 20px;
+            width: 100%;
+            background-color: var(--component-color);
+            box-shadow: 1px 1px 5px 0 rgba(100, 100, 100, 0.2);
+        }
 
         &__heading {
             display: block;
@@ -424,6 +462,7 @@ body {
             display: flex;
             flex-flow: row wrap;
             width: 100%;
+            text-align: left;
 
             img {
                 display: block;
@@ -432,6 +471,11 @@ body {
                 height: 120px;
                 object-fit: cover;
                 border-radius: 2px;
+
+                @media (max-width: 450px) {
+                    margin: 0 auto;
+                    padding: 0;
+                }
             }
         }
 
@@ -459,6 +503,7 @@ body {
         }
 
         &__text {
+            margin-bottom: 0;
             padding: 0;
             font-size: var(--content-font-size);
         }
@@ -481,8 +526,14 @@ body {
             font-size: 2.7em;
         }
 
-        .c-post-preview {
+        .n-post-preview {
             display: block;
         }
+    }
+}
+
+.dark-mode-toggle {
+    .n-button {
+        color: var(--text-color);
     }
 }

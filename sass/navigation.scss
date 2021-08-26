@@ -1,4 +1,6 @@
 .c-navigation { $c: &;
+	display: flex;
+	align-items: center;
 	position: absolute;
 	z-index: 4;
 	top: 0;
@@ -8,6 +10,7 @@
 	height: 70px;
 	max-height: 70px;
 	background-color: var(--navigation-color);
+	// box-sizing: content-box;
 
 	&--open {
 		@media (max-width: 700px) {

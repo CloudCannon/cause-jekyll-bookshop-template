@@ -89,7 +89,7 @@ body {
     }
 
     blockquote {
-        margin: 25px var(--s-20-40) 25px var(--s-20-40);
+        margin: 25px var(--s-30-50) 25px var(--s-30-50);
         padding: 15px 15px 15px 45px;
         box-sizing: border-box;
         border-left: 4px solid rgba(0,0,0,0.2);
@@ -106,16 +106,17 @@ body {
 
 .layout {
     margin: 0 auto;
-    padding: var(--component-padding) var(--s-20-40);
+    padding: var(--component-padding) var(--s-30-50);
 
     &--post {
         max-width: 750px;
+        box-sizing: content-box;
 
         h1:not(:first-child), h2:not(:first-child), h3:not(:first-child), h4:not(:first-child), h5:not(:first-child), h6:not(:first-child) {
             margin-top: 2.2em;
         }
 
-        .c-post-preview {
+        .n-post-preview {
             display: none;
         }
 
@@ -234,22 +235,29 @@ body.cms-editor-active {
 // Components
 
 .component-wrapper {
-    &--alt {
-        background-color: var(--component-alt-color);
+    &--light {
+        background-color: var(--component-color);
+    }
+    &--dark {
+        background-color: var(--dark-component-color);
     }
 
     &--branded {
         background-color: var(--brand-color);
+    }
+
+    &:last-child {
+        // padding-bottom: calc(var(--component-padding) + 20px);
     }
 }
 
 .component {
     position: relative;
     margin: 0 auto;
-    padding-left: var(--s-20-40);
-    padding-right: var(--s-20-40);
+    padding: var(--component-padding) var(--s-30-50);
     max-width: var(--breakpoint-max);
     transition: filter 0.2s ease-out, opacity 0.2s ease-in-out; // For CMS editor links
+    box-sizing: content-box;
 
     &:before, &:after {
         content: '';

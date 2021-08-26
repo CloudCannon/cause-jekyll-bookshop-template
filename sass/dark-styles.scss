@@ -1,7 +1,8 @@
 body {
     &.dark {
         --page-color: var(--dark-page-color);
-        --component-alt-color: var(--dark-component-alt-color);
+        --component-color: var(--dark-light-component-color);
+        --dark-component-color: var(--dark-dark-component-color);
         --brand-color: var(--dark-brand-color);
         --headings-color: var(--dark-headings-color);
         --text-color: var(--dark-text-color);
