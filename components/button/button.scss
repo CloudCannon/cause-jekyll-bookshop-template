@@ -26,6 +26,10 @@
 		}
 	}
 
+	&--transparent {
+		color: var(--page-color);
+	}
+
 	&__label {
 		color: inherit;
 	}

@@ -1,10 +1,9 @@
-{% assign c = "c-staff-list" %}
-
 {% if include.show_staff %}
-	<div class="{{c}} 
-				component
-				component-attributes">
-		<div class="{{c}}__wrapper">
+	<div class="{{c}}__inner-wrapper
+				component">
+		<h2 class="{{c}}__heading">{{ include.heading }}</h2>
+		<p class="{{c}}__subheading">{{ include.subheading }}</p>
+		<div class="{{c}}__staff">
 			{% for member in site.staff_members %}
 				<div class="{{c}}__staff-card">
 					<img class="{{c}}__staff-image" 

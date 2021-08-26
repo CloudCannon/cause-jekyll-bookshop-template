@@ -1,10 +1,7 @@
-{% assign c = "c-statistics" %}
-
-<div class="{{c}}
-			component
-			component-attributes">
+<div class="{{c}}__inner-wrapper
+			component">
 	{% if include.heading %}
-		<h3 class="{{c}}__main-heading">{{ include.heading }}</h3>
+		<h2 class="{{c}}__main-heading">{{ include.heading }}</h2>
 	{% endif %}
 	<div class="{{c}}__grid">
 		{% for stat in include.statistics %}

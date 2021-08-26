@@ -1,5 +1,7 @@
 .c-statistics {
-	padding: var(--component-padding) 0;
+	&__inner-wrapper {
+		padding: var(--component-padding) 0;
+	}
 
 	&__main-heading {
 		text-align: center;

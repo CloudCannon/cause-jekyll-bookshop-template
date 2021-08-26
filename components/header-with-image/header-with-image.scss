@@ -1,29 +1,44 @@
 .c-header-with-image { $c: &;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: center;
-	padding: 50px 0 var(--component-padding) 0;
-	text-align: center;
+	&__inner-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		padding: 50px 0 var(--component-padding) 0;
+		text-align: center;
 
-	&--center {
-		align-items: center;
-
-		#{$c}__content-wrapper {
+		&--center {
 			align-items: center;
+
+			#{$c}__content-wrapper {
+				align-items: center;
+			}
 		}
-	}
 
-	&--right {
-		align-items: flex-end;
-
-		#{$c}__content-wrapper {
+		&--right {
 			align-items: flex-end;
+
+			#{$c}__content-wrapper {
+				align-items: flex-end;
+			}
 		}
 	}
+	
+
+		// TODO
 
 	&.component {
 		background-color: var(--brand-color);
+
+		&:before {
+			display: block;
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			max-width: none;
+			background: red;
+		}
 	}
 
 	&__content-wrapper {

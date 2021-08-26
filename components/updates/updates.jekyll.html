@@ -1,8 +1,6 @@
-{% assign c = "c-updates" %}
-
-<div class="{{c}} 
+<div class="{{c}}__inner-wrapper
 			component">
-	<h3 class="{{c}}__heading">{{ include.heading }}</h3>
+	<h2 class="{{c}}__heading">{{ include.heading }}</h2>
 	<div class="{{c}}__wrapper">
 		{% for update in include.updates %}
 			<div class="{{c}}__update">

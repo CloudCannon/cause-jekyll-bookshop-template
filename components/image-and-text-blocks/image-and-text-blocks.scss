@@ -1,5 +1,8 @@
 .c-image-and-text-blocks { $c: &;
-	padding: var(--component-padding) 0;
+
+	&__inner-wrapper {
+		padding: var(--component-padding) 0;
+	}
 
 	&__block {
 		display: flex;
@@ -37,7 +40,7 @@
 		padding-right: 40px;
 
 		@media (max-width: 900px) {
-			padding: 0;
+			padding: 0 0 50px 0;
 		}
 	}
 

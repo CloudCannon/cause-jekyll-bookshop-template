@@ -1,9 +1,6 @@
-{% assign c = "c-header-with-image" %}
-
-<div class="{{c}}
-			{{c}}--{{ include.content_alignment | slugify }}
-			component
-			component-attributes">
+<div class="{{c}}__inner-wrapper
+			{{c}}__inner-wrapper--{{ include.content_alignment | slugify }}
+			component">
 	<div class="{{c}}__content-wrapper">
 		<div class="{{c}}__heading"
 			 style="color: {{ include.text_color }}">{{ include.heading_html }}</div>

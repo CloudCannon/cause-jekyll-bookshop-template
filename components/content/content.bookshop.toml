@@ -7,3 +7,4 @@ tags = ["Text"]
 
 [props]
 content_html = "<p>This is a <b>testing template</b> made with the <a href='https://github.com/cloudcannon/bookshop' target='_blank'>bookshop component system.</a></p>"
+component_theme = "Light"

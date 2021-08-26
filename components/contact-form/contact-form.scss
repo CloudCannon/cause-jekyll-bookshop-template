@@ -1,5 +1,5 @@
 .c-contact-form {
-	&__wrapper {
+	&__inner-wrapper {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: center;
@@ -23,6 +23,7 @@
 		grid-gap: 60px;
 		justify-items: center;
 		width: 100%;
+		max-width: 950px;
 	}
 
 	&__form {

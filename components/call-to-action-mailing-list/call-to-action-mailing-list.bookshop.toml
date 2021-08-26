@@ -10,4 +10,4 @@ heading = "Join us"
 lower_text = "Sign up to hear the latest news and progress in our fight for the sheep vote."
 form_submission_email = ""
 submit_success_url = "/contact-success/"
-_alt = true
+component_theme = "Light"

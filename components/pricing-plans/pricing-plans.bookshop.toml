@@ -5,6 +5,11 @@ description = "Pricing plan cards"
 icon = "wysiwyg"
 tags = ["Marketing"]
 
+[props]
+heading = 'Find the perfect plan for your business'
+subheading = 'All plans include our award winning sales optimization solution to track your sales in real time.'
+component_theme = "Light"
+
 [[props.plans]]
 title = "Basic"
 card_color = "#8e8e8e"

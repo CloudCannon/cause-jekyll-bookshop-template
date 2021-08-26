@@ -1,8 +1,6 @@
 .c-services {
-	padding: var(--component-padding) 0;
-
-	&__wrapper {
-
+	&__inner-wrapper {
+		padding: var(--component-padding) 0;
 	}
 
 	&__heading {

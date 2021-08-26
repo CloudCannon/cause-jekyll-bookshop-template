@@ -1,5 +1,7 @@
 .c-map {
-	padding: var(--component-padding) 0 0 0;
+	&__inner-wrapper {
+		max-width: none;
+	}
 
 	&__map {
 		width: 100vw;

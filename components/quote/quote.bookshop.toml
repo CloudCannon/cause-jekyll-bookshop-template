@@ -10,4 +10,4 @@ image = "https://source.unsplash.com/6anudmpILw4/600x400"
 quote_text = "Hydra has shaped the business we have today. We have a repeatable sales process and a strategy to scale our team. I recommend Hydra to any business looking to improve their sales."
 name = "Jim James"
 role = "CEO of Global Corp"
-_alt = true
+component_theme = "Light"

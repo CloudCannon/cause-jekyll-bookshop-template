@@ -1,11 +1,10 @@
-{% assign c = "c-post-preview" %}
-
-<div class="{{c}}">
-	<div class="{{c}}__top">
-		<img class="{{c}}__preview-image" src="{{ include.post.SEO_options.image }}" alt="{{ include.post.title }} image" />
+{% assign n = 'n-post-preview' %}
+<div class="{{n}}__inner-wrapper">
+	<div class="{{n}}__top">
+		<img class="{{n}}__preview-image" src="{{ include.post.SEO_options.image }}" alt="{{ include.post.title }} image" />
 		{% bookshop post-header post=include.post %}
 	</div>
-	<div class="{{c}}__content">
+	<div class="{{n}}__content">
 		{{ include.post.excerpt }}
 	</div>
 

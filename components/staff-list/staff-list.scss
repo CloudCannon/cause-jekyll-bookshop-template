@@ -1,11 +1,18 @@
 .c-staff-list {
-	padding: var(--component-padding) 0;
-	
-	&__wrapper {
+	&__inner-wrapper {
+		padding: var(--component-padding) 0;
+	}
+
+	&__heading, &__subheading {
+		text-align: center;
+	}
+
+	&__staff {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: center;
 		align-items: center;
+		padding-top: 20px;
 	}
 
 	&__staff-card {

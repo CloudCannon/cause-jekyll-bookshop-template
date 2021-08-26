@@ -7,6 +7,7 @@ tags = ["Content"]
 
 [props]
 heading = "Pricing FAQ"
+component_theme = "Light"
 
 [[props.questions]]
 question_text = "What types of payment do you accept?"

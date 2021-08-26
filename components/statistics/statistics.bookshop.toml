@@ -5,6 +5,9 @@ description = "A group of statistics"
 icon = "wysiwyg"
 tags = ["Content"]
 
+[props]
+component_theme = "Light"
+
 [[props.statistics]]
 icon_image = ""
 heading = "Population"

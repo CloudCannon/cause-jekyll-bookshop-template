@@ -1,6 +1,9 @@
 .c-frequently-asked-questions {
+	&__inner-wrapper {
 		padding: var(--component-padding) 0;
-	&__wrapper {
+	}
+	
+	&__items {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: center;

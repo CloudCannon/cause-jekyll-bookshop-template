@@ -1,5 +1,7 @@
 .c-updates {
-	padding: var(--component-padding) 0;
+	&__inner-wrapper {
+		padding: var(--component-padding) 0;
+	}
 
 	&__heading {
 		margin-bottom: var(--component-padding);
@@ -14,7 +16,7 @@
 
 	&__update {
 		border: 1px solid var(--border-color);
-		background: var(--page-color);
+		background-color: var(--component-color);
 		border-radius: 3px;
 	}
 

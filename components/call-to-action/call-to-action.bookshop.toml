@@ -10,4 +10,4 @@ heading_html = "<h2><strong>Improve</strong> your sales process today</h2>"
 button_label = "Get Started Free"
 Button_link_url = "#"
 button_variant.select = ["Transparent", "Filled"]
-_branded = true
+component_theme = "Light"

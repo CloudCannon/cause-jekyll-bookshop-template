@@ -14,3 +14,4 @@ button_label = "Get Started Free"
 button_link_url = "/sign-up/"
 button_variant.select = ["Transparent", "Filled"]
 image = "/images/dashboard.png"
+component_theme = "Light"

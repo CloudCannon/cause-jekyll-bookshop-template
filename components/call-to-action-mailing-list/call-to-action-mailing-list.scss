@@ -1,16 +1,16 @@
 .c-call-to-action-mailing-list {
-	padding: var(--component-padding) 0;
 
 	&__inner-wrapper {
+		padding: var(--component-padding) 30px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 50px 30px;
 	}
 
 	&__heading {
 		margin: 0;
+		padding-top: 50px;
 		color: var(--headings-color);
 	}
 
@@ -40,6 +40,7 @@
 		align-items: center;
 		max-width: 500px;
 		margin: 30px auto 0 auto;
+		padding-bottom: 50px;
 	}
 
 	&__email-input {

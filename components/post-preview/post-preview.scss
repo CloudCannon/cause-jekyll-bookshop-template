@@ -1,5 +1,11 @@
-.c-post-preview {
-	padding: 0 0 100px 0;
+.n-post-preview {
+	&__inner-wrapper {
+		padding: 0 25px 100px 25px;
+
+		.n-button {
+			padding: 10px 30px;
+		}
+	}
 
 	&__top {
 		display: block;
@@ -12,6 +18,11 @@
 		height: 160px;
 		object-fit: cover;
 		border-radius: 2px;
+
+		@media (max-width: 450px) {
+			padding-right: 0;
+			width: 100%;
+		}
 	}
 
 	&__content {

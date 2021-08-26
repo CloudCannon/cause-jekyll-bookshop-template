@@ -9,3 +9,4 @@ tags = ["Collections"]
 show_posts = true
 heading = "Blog"
 content_text = "Get an introduction to some industry topics and stay informed with our in-depth articles."
+component_theme = "Light"
