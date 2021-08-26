@@ -12,12 +12,16 @@ Find more templates, themes and step-by-step Jekyll tutorials at [CloudCannon Co
 
 ## Features
 
+* Easy theme switching
+* Customisable themes
+* Live editing with [CloudCannon](http://cloudcannon.com/)
+* Component library for website building
+* Dark mode
+* Fully configurable Website
 * Pre-built pages
 * Pre-styled components
-* Configurable footer
 * Optimised for editing in [CloudCannon](http://cloudcannon.com/)
-* SEO tags
-* Google Analytics
+* Search engine optimisation
 * [Donorbox](https://donorbox.org/)
 
 ## Setup

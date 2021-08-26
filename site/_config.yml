@@ -80,6 +80,10 @@ _select_data:
     - 'Hydra'
     - 'Justice'
     - 'Cause'
+  component_themes:
+    - 'Light'
+    - 'Dark'
+    - 'Branded'
 
 _comments:
   live_domain_url: "Remove any '/' at the end of the URL so your domain looks like this - 'https://example.com'"
