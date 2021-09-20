@@ -70,6 +70,8 @@
 		{% include sass/theme-files/justice.scss %}
 	{% when "cause" %}
 		{% include sass/theme-files/cause.scss %}
+	{% when "urban" %}
+		{% include sass/theme-files/urban.scss %}
 {% endcase %}
 
 {% include sass/dark-styles.scss %}
