@@ -6,10 +6,12 @@
 			 style="color: {{ include.text_color }}">{{ include.heading_html }}</div>
 		<div class="{{c}}__subheading"
 			 style="color: {{ include.text_color }}">{{ include.subheading_html }}</div>
-		{% bookshop button 
-					label=include.button_label
-					variant=include.button_variant
-					link_url=include.button_link_url %}
+		{% if include.button_link_url %}
+			{% bookshop button 
+						label=include.button_label
+						variant=include.button_variant
+						link_url=include.button_link_url %}
+		{% endif %}
 	</div>
 	{% if include.image %}
 		<div class="{{c}}__image-wrapper">

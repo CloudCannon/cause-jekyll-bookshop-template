@@ -30,6 +30,19 @@
 		color: var(--page-color);
 	}
 
+	&--plain-text {
+		padding: 0;
+		background-color: transparent;
+		border: none;
+		color: var(--link-color);
+
+		&:hover {
+			background-color: transparent;
+			border: none;
+			text-decoration: underline;
+		}
+	}
+
 	&__label {
 		color: inherit;
 	}

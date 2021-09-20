@@ -1,0 +1,55 @@
+<div class="{{c}}__inner-wrapper
+			{% if include.content_arrangement == 'Right' %}
+			{{c}}__inner-wrapper--right
+			{% endif %}
+			component">
+	{% if include.details.show_details %}
+		<div class="{{c}}__details">
+			<h3>{{ include.details.heading }}</h3>
+			<p>{{ include.details.subheading }}</p>
+			{% if include.details.button_link_url %}
+				{% bookshop button 
+					label=include.details.button_label
+					variant=include.details.button_variant
+					link_url=include.details.button_link_url %}
+			{% endif %}
+		</div>
+	{% endif %}
+	{% assign item_number = include.gallery_items | size %}
+	<div class="{{c}}__items
+				{% if include.details.show_details %}
+				{{c}}__items--with-details
+					{% if item_number < 3 %}
+					{{c}}__items--with-details-stacked
+					{% endif %}
+				{% endif %}
+				{% if include.image_borders %}
+				{{c}}__items--bordered
+				{% endif %}
+				{% if include.details.show_details == false %}
+					{{c}}__items--full-size
+				{% endif %}">
+		{% for item in include.gallery_items %}
+			{% if item.link_url %}
+				<a class="{{c}}__item {{c}}__item--link"
+				   href="{{ item.link_url }}">
+				    <div class="{{c}}__spacer"></div>
+					<img src="{{ item.image }}" alt="{{ item.image_title }}" />
+					<div class="{{c}}__item-details">
+						<p class="{{c}}__title">{{ item.image_title }}</p>
+						<p class="{{c}}__caption">{{ item.image_caption }}</p>
+					</div>
+				</a>
+			{% else %}
+				<div class="{{c}}__item">
+				    <div class="{{c}}__spacer"></div>
+					<img src="{{ item.image }}" alt="{{ item.image_title }}" />
+					<div class="{{c}}__item-details">
+						<p class="{{c}}__title">{{ item.image_title }}</p>
+						<p class="{{c}}__caption">{{ item.image_caption }}</p>
+					</div>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+</div>
