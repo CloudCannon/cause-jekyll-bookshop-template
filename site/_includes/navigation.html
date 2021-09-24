@@ -1,0 +1,54 @@
+{% assign c = "c-navigation" %}
+{% assign nav = site.data.navigation %}
+
+<div id="js-nav"
+	 class="{{c}}
+	 		{% if page.url == "/" %}
+		 		{{c}}--home
+	 		{% endif %}"
+	 {% if nav.background_image %}
+		 style="background-image: url('{{ nav.background_image }}')"
+	 {% endif %}>
+	<div class="{{c}}__inner-wrapper">
+		{% if nav.logo_image %}
+			<a href="/">
+				<img src="{{ nav.logo_image }}" alt="{{ site.data.general_settings.website_name }}" />
+			</a>
+		{% endif %}
+		<h1 class="{{c}}__title"><a href="/">{{ site.data.general_settings.website_name }}</a></h1>
+		<ul class="{{c}}__nav-items">
+			{% for item in nav.navigation_items %}
+				<li class="{{c}}__item-wrapper">
+					<a class="{{c}}__item
+							  {{c}}__item--{{ item.link_type | slugify }}
+							  {% if page.url == item.link_url %}
+							  {{c}}__item--active
+							  {% endif %}"
+					   href="{{ item.link_url }}">
+					   <span class="{{c}}__label">{{ item.label }}</span>
+					</a>
+				</li>
+			{% endfor %}
+
+			<li class="{{c}}__item-wrapper {{c}}__item-wrapper--mobile">
+				<a id="js-mobile-toggle"
+				   class="{{c}}__item
+						  {{c}}__item--mobile-toggle"
+				   href="#">
+				   <span class="{{c}}__label">☰</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<script>
+	const navToggle = document.getElementById('js-mobile-toggle');
+	const nav = document.getElementById('js-nav');
+	
+	function toggleNav() {
+		nav.classList.toggle('c-navigation--open');
+	}
+
+	navToggle.addEventListener('click', toggleNav);
+</script>

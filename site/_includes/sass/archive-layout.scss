@@ -1,0 +1,33 @@
+.archive-layout {
+	margin: 0 auto;
+	background: var(--page-color);
+
+	&__heading {
+		padding: var(--component-padding) var(--s-30-50) 0 var(--s-30-50);
+		text-align: center;
+	}
+
+	&__tags {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		margin-top: 25px;
+	}
+
+	&__tag {
+		display: flex;
+		padding: 3px 5px;
+		border-radius: 5px;
+		background: var(--tag-color);
+
+		a {
+			font-size: 12px;
+			color: var(--text-color);
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}

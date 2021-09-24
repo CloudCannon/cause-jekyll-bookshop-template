@@ -1,0 +1,44 @@
+<head>
+    <title>{{ site.data.general_settings.website_name }}</title>
+    {% if page.SEO_options.prevent_indexing %}
+        <meta name="robots" content="noindex,nofollow">
+    {% endif %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="{{ site.data.general_settings.website_name }}">
+    <meta property="og:description" content="{{ page.SEO_options.description | default: site.data.general_settings.website_description_text }}">
+    <meta property="og:image" content="{{ site.data.general_settings.social_media_share_image }}">
+    <meta property="og:url" content="{{ site.data.general_settings.live_domain_url }}{{ page.url }}">
+    <meta name="twitter:card" content="{{ page.SEO_options.description | default: site.data.general_settings.website_description_text }}">
+    <meta property="og:site_name" content="{{ site.data.general_settings.website_name }}">
+    <meta name="twitter:image:alt" content="{{ site.data.general_settings.social_media_share_image }}">
+    <meta property="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:site" content="{{ site.data.general_settings.twitter_handle }}">
+    <link rel="canonical" href="{{ site.data.general_settings.live_domain_url }}/">
+
+    <link rel="stylesheet" href="/assets/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="shortcut icon" href="{{ site.data.general_settings.icons.large_bookmark_icon_image }}">
+    <link rel="icon" type="image/png" href="{{ site.data.general_settings.icons.large_bookmark_icon_image }}" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{{ site.data.general_settings.icons.small_bookmark_icon_image }}" sizes="16x16" />
+
+    <link rel="apple-touch-icon" sizes="128x128" href="{{ site.data.general_settings.icons.small_mobile_icon_image }}">
+    <link rel="apple-touch-icon" sizes="256x256" href="{{ site.data.general_settings.icons.large_mobile_icon_image }}">
+    <link rel="icon" sizes="128x128" href="{{ site.data.general_settings.icons.small_mobile_icon_image }}" />
+    <link rel="icon" sizes="256x256" href="{{ site.data.general_settings.icons.large_mobile_icon_image }}" />
+
+    {% if theme_data.headings_font or theme_data.body_font %}
+        {% assign heading_fonts = theme_data.headings_font | replace: ', ', '|' 
+                                               | replace: ',', '|' 
+                                               | replace: ' ', '+' %}
+        {% assign body_fonts = theme_data.body_font | replace: ', ', '|' 
+                                               | replace: ',', '|' 
+                                               | replace: ' ', '+' %}
+        <link rel="stylesheet" 
+              href="//fonts.googleapis.com/css?family={% if heading_fonts %}{{ heading_fonts }}{% if body_fonts %}|{% endif %}{% endif %}{{ body_fonts }}:400,400i,700,700i">
+        
+    {% endif %}
+</head>

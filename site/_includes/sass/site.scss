@@ -1,0 +1,283 @@
+// These styles are the base styles for all themes. They are also the base set for Hydra. 
+// Changing these will effect all themes, and the Hydra theme.
+// To add a new theme, create a new stylesheet and include it at the bottom of this one.
+
+
+* {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    text-rendering: geometricPrecision;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+html,
+body {
+    --font: var(--body-font), "Helvetica Neue", "Helvetica", "Arial";
+    --headings-fonts: var(--headings-font), "Helvetica Neue", "Helvetica", "Arial";
+    --component-padding: 100px;
+    --navigation-offset: 70px;
+    position: relative;
+    margin: 0;
+    font-family: var(--font);
+    color: var(--text-color);
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    h1, h2, h3, h4, h5 {
+        color: var(--headings-color);
+        font-family: var(--headings-fonts);
+    }
+
+    h1 {
+        margin: 0;
+        font-weight: 300;
+        font-size: 3.7em;
+    }
+
+    h2, .archive-layout__heading {
+        font-weight: 400;
+        font-size: 3.6em;
+        margin: 0 0 30px 0;
+    }
+
+    h3 {
+        margin: 0;
+        font-size: 1.9em;
+        font-weight: 400;
+    }
+
+    h4 {
+        margin: 20px 0 10px 0;
+        font-size: 1.6em;
+        font-weight: 300;
+    }
+
+    p, li, blockquote, table {
+        font-size: var(--content-font-size);
+        font-weight: 400;
+    }
+
+    p {
+        color: var(--text-color);
+        margin-bottom: 20px;
+        line-height: 140%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    strong {
+        font-weight: 700;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--link-color);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    blockquote {
+        margin: 25px var(--s-30-50) 25px var(--s-30-50);
+        padding: 15px 15px 15px 45px;
+        box-sizing: border-box;
+        border-left: 4px solid rgba(0,0,0,0.2);
+        background-color: rgba(0,0,0,0.04);
+    }
+}
+
+// Layouts
+
+.body-wrapper {
+   padding-top: var(--navigation-offset);
+   background-color: var(--page-color);
+}
+
+.layout {
+    margin: 0 auto;
+    padding: var(--component-padding) var(--s-30-50);
+
+    &--post {
+        max-width: 750px;
+        box-sizing: content-box;
+
+        h1:not(:first-child), h2:not(:first-child), h3:not(:first-child), h4:not(:first-child), h5:not(:first-child), h6:not(:first-child) {
+            margin-top: 2.2em;
+        }
+
+        .n-post-preview {
+            display: none;
+        }
+
+        .c-post-navigation {
+            &__next-preview {
+                display: none;
+            }
+        }
+    }
+}
+
+body.cms-editor-active {
+    overflow: unset;
+}
+
+// CMS Styles
+
+.cms-editor-active {
+    .cms-editor-link {
+        position: relative;
+        outline: unset !important;
+        cursor: pointer;
+
+        .cms-editor-button {
+            position: absolute;
+            padding: 30px;
+            height: 100%;
+            pointer-events: none;
+
+            &:after {
+                content: 'Edit Component';
+                display: block;
+                position: sticky;
+                z-index: 99;
+                top: 30px;
+                padding: 12px 20px;
+                width: auto;
+                border-radius: 4px;
+                box-shadow: 0px 0px 1px #5e5e5e;
+                border: 2px solid #cfcfcf;
+                background: #ffffff;
+                text-align: center;
+                font-family: 'TT Norms Pro', var(--font);
+                font-size: 16px;
+                color: #222222;
+                opacity: 0;
+                transition: opacity 0.15s ease-in;
+            }
+
+            &:hover {
+                &:after {
+                    border: 2px solid #707070;
+                }
+            }
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transform: translateY(-50%);
+            width: 99%;
+            height: 99%;
+            border: 6px solid gold;
+            opacity: 0;
+            border-radius: 8px;
+            box-shadow: inset 0px 0px 4px #ffd90a;
+            pointer-events: none;
+            box-sizing: border-box;
+            transition: opacity 0.15s ease-in;
+        }
+        
+        &:hover {
+            outline: 0 solid transparent;
+
+            .cms-editor-button {
+                pointer-events: all;
+
+                &:after {
+
+                    opacity: 1;
+                }
+            }
+
+            &:after {
+                opacity: 1;
+            }
+
+            .component {
+                // filter: blur(4px);
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+.dark-mode-toggle {
+    .n-button {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        font-size: 1.2em;
+        padding: 6px 8px;
+        cursor: pointer;
+        user-select: none;
+
+        svg {
+            padding-right: 8px;
+        }
+    }
+}
+
+// Components
+
+.component-wrapper {
+    &--light {
+        background-color: var(--component-color);
+    }
+    &--dark {
+        background-color: var(--dark-component-color);
+    }
+
+    &--branded {
+        background-color: var(--brand-color);
+    }
+
+    &:last-child {
+        // padding-bottom: calc(var(--component-padding) + 20px);
+    }
+}
+
+.component {
+    position: relative;
+    margin: 0 auto;
+    padding: var(--component-padding) var(--s-30-50);
+    max-width: var(--breakpoint-max);
+    transition: filter 0.2s ease-out, opacity 0.2s ease-in-out; // For CMS editor links
+    box-sizing: content-box;
+
+    &:before, &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: inherit;
+    }
+
+    &:after {
+        left: unset;
+        right: -100%;
+    }
+
+    &--full {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: none;
+    }
+}
