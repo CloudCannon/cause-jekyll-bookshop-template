@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+{%- include theme.html -%}
+{% include head.html %}
+<body>
+    <div class="body-wrapper">
+        {% include navigation.html %}
+        <!-- 
+            A data-bookshop-live enables live editing previews in CloudCannon.
+            To enable live previews of new components, we render all components
+            via a page component that expects an array of content blocks.
+
+            data-bookshop-props is used to control what front matter to bind to.
+            Here we want to bind to all the front matter, so that page.content_blocks
+            is accessible from the bookshop renderer.
+
+            This element will get picked up by the bookshop dev renderer if present,
+            on production this does nothing.
+        -->
+        <div data-bookshop-live="page" data-bookshop-props="page">
+            <!-- 
+                Bookshop components are accessed using the bookshop tag, 
+                using the same syntax as the standard Jekyll include tag.
+            -->
+
+            {% bookshop page content_blocks=page.content_blocks page_theme=page.page_theme %}
+        </div>
+        {{ content }}
+
+        {% include footer.html %}
+
+        <div class="dark-mode-toggle">
+            <a id="js-dark-mode"
+               class="n-button">
+               {% include svg/darklightmode.svg %} <span id="js-mode-label">Dark Mode</span>
+            </a>
+        </div>
+        <script type="text/javascript" src="/assets/js/dark-mode.js"></script>
+
+        <!--
+            live component for CloudCannon live previews.
+        -->
+        {% bookshop_live _cloudcannon/bookshop-live.js %}
+    </div>
+</body>
+</html>
