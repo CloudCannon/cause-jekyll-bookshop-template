@@ -1,0 +1,36 @@
+.c-frequently-asked-questions {
+	&__inner-wrapper {
+		padding: var(--component-padding) 0;
+	}
+	
+	&__items {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__heading {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	&__question {
+		flex: 1 var(--s-350-390);
+		padding: 25px;
+
+		dt {
+			margin: 0 0 5px 0;
+			font-weight: 600;
+			font-size: 1.7em;
+			color: var(--text-color);
+		}
+
+		dd {
+			margin: 0;
+			padding: 0;
+			font-size: 1.6em;
+			font-weight: 400;
+		}
+	}
+}

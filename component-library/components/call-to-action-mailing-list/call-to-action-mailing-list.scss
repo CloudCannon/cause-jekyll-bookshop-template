@@ -1,0 +1,58 @@
+.c-call-to-action-mailing-list {
+
+	&__inner-wrapper {
+		padding: var(--component-padding) 30px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__heading {
+		margin: 0;
+		padding-top: 50px;
+		color: var(--headings-color);
+	}
+
+	&__content {
+		text-align: center;
+	}
+
+	.n-button {
+		margin-top: 0;
+		border: none;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		font-size: 10px;
+		cursor: pointer;
+
+		&__label {
+			border: none;
+			background-color: transparent;
+			font-size: 1.6em;
+			font-weight: 700;
+			cursor: pointer;
+		}
+	}
+
+	form {
+		display: flex;
+		align-items: center;
+		max-width: 500px;
+		margin: 30px auto 0 auto;
+		padding-bottom: 50px;
+	}
+
+	&__email-input {
+		flex-grow: 1;
+		flex-shrink: 1;
+		width: 100%;
+		padding: 16px 40px;
+		border: 1px solid #ddd;
+		border-top-left-radius: 30px;
+		border-bottom-left-radius: 30px;
+		box-sizing: content-box;
+		font-size: 1.6em;
+		font-weight: 100;
+	}
+}

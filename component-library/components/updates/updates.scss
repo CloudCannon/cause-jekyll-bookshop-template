@@ -1,0 +1,50 @@
+.c-updates {
+	&__inner-wrapper {
+		padding: var(--component-padding) 0;
+	}
+
+	&__heading {
+		margin-bottom: var(--component-padding);
+		text-align: center;
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+		grid-gap: 30px;
+	}
+
+	&__update {
+		border: 1px solid var(--border-color);
+		background-color: var(--component-color);
+		border-radius: 3px;
+	}
+
+	&__image {
+		height: 200px;
+		background-position: center;
+		background-size: cover;
+		border-top-right-radius: 3px;
+		border-top-left-radius: 3px;
+	}
+
+	&__content-wrapper {
+		padding: 20px;
+	}
+
+	&__date {
+		font-size: 1.76em;
+		font-weight: 700;
+		opacity: 0.5;
+	}
+
+	&__title {
+		margin: 20px 0;
+		font-size: 2.4em;
+		color: var(--headings-color);
+	}
+
+	&__content {
+		font-size: 1.76em;
+	}
+}

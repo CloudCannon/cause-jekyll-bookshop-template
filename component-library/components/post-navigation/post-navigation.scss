@@ -1,0 +1,31 @@
+.c-post-navigation {
+	&__inner-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 16px 0;
+	}
+
+	&__heading {
+		display: none;
+        margin-top: 75px;
+        font-size: 3.6em;
+	}
+
+	&__option {
+		font-size: 1.4em;
+		color: var(--link-color);
+
+		&--prev {
+
+		}
+
+		&--next {
+
+		}
+	}
+
+	.n-post-header__heading {
+		font-size: 2.7em;
+	}
+}

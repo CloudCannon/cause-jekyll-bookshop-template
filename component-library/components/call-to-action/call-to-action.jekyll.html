@@ -1,0 +1,12 @@
+<div class="{{c}}__inner-wrapper
+			component">
+	<div class="{{c}}__content">
+		{{ include.heading_html }}
+	</div>
+	{% if include.button_label %}
+		{% bookshop button 
+			label=include.button_label
+			variant=include.button_variant
+			link_url=include.button_link_url %}
+	{% endif %}
+</div>

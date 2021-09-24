@@ -1,0 +1,55 @@
+.c-contact-cards {
+	&__inner-wrapper {
+		padding: var(--component-padding) 0;
+	}
+	
+	&__content {
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		grid-gap: 40px;
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		background-color: var(--dark-component-color);
+		box-shadow: 1px 1px 5px 0 rgba(100, 100, 100, 0.2);
+		padding: 20px;
+		border-radius: 2px;
+	}
+
+	&__details-wrapper {
+		display: flex;
+
+		img {
+			margin-right: 20px;
+			width: 120px;
+			height: 120px;
+		}
+	}
+
+	&__name {
+		margin: 0;
+	}
+
+	&__role {
+		margin: 8px 0;
+		opacity: 0.6;
+		font-size: 1.7em;
+	}
+
+	&__number {
+		margin: 0;
+		a {
+
+		}
+	}
+
+	&__description {
+
+	}
+}

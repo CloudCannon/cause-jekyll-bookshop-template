@@ -1,0 +1,22 @@
+{% assign c = "c-post-navigation" %}
+<div class="{{c}}__inner-wrapper">
+	{% if page.previous.url %}
+		<a class="{{c}}__option
+				  {{c}}__option--prev" 
+			href="{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
+	{% endif %}
+	{% if page.next.url %}
+		<a class="{{c}}__option
+				  {{c}}__option--next" 
+			href="{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
+	{% endif %}
+
+	<div class="{{c}}__next-preview">
+		<h2 class="{{c}}__heading">Keep Reading</h2>
+		{% if page.next %}
+			{% bookshop post-preview post=page.next %}
+		{% elsif page.previous %}
+			{% bookshop post-preview post=page.previous %}
+		{% endif %}
+	</div>
+</div>

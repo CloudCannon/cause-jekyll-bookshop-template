@@ -1,0 +1,27 @@
+<div class="{{c}}__inner-wrapper
+			component">
+	<h2 class="{{c}}__heading">{{ include.heading }}</h2>
+	<p class="{{c}}__content">
+		{{ include.lower_text }}
+	</p>
+	<form class="{{c}}__mailing-list"
+		  action="{{ include.submit_success_url }}" 
+		  method="post">
+		<input type="hidden" 
+			   name="_to" 
+			   value="{{ include.form_submission_email }}" />
+		<input class="{{c}}__email-input"
+			   type="email" 
+			   name="email" 
+			   id="email" 
+			   placeholder="Email" 
+			   required />
+		<input type="text" 
+			   name="_gotcha" 
+			   style="display: none;">
+		{% bookshop button 
+					label='Sign up'
+					variant='Filled'
+					submit=true %}
+	</form>
+</div>

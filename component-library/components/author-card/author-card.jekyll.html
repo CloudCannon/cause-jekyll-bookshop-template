@@ -1,0 +1,23 @@
+{% assign c = "c-author-card" %}
+{% assign author_path = page.author_staff_member | prepend: "/staff_members/" | append: "/" %}
+{% assign author = site.staff_members | where: "url", author_path | first %}
+<div class="{{c}}__inner-wrapper">
+	<h4 class="{{c}}__heading">Meet the author</h4>
+	<div class="{{c}}__content">
+		<div class="{{c}}__top">
+			<img class="{{c}}__image" 
+				 src="{{ author.image }}" 
+				 alt="{{ author.name }}" />
+			<div class="{{c}}__details">
+				<p class="{{c}}__name">{{ author.name }}</p>
+				{% if author.position %}
+					<p class="{{c}}__role">{{ author.position }}</p>
+				{% endif %}
+				{% if author.phone %}
+					<p class="{{c}}__phone"><a href="tel:{{ author.phone }}">{{ author.phone }}</a> ext {{ author.phone_extension }}</p>
+				{% endif %}
+			</div>
+		</div>
+		<p class="{{c}}__text">{{ author.blurb }}</p>
+	</div>
+</div>

@@ -1,0 +1,21 @@
+<div class="{{c}}__inner-wrapper
+			component">
+	<div class="{{c}}__content-wrapper">
+		{% if include.heading %}
+			<h2 class="{{c}}__heading">{{ include.heading }}</h2>
+		{% endif %}
+		{{ include.content_html }}
+	</div>
+	<div class="{{c}}__reviews">
+		{% for review in include.reviews %}
+			<div class="{{c}}__review">
+				<div class="{{c}}__review-content">
+					<p>{{ review.review_text }}</p>
+				</div>
+				<div class="{{c}}__review-name">
+					<img src="{{ review.image }}" alt="{{ review.name }}" /><span>{{ review.name }}</span>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>

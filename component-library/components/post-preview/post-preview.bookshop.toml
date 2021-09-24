@@ -1,0 +1,10 @@
+# This component is not accessible within the CMS
+
+[component]
+array_structures = []
+label = "Post Preview"
+description = ""
+icon = "wysiwyg"
+tags = []
+
+[props]

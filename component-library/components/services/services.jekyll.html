@@ -1,0 +1,17 @@
+<div class="{{c}}__inner-wrapper
+			component">
+	<h2 class="{{c}}__heading">{{ include.heading }}</h2>
+	<p class="{{c}}__description">{{ include.description_text }}</p>
+
+	<div class="{{c}}__services">
+		{% for service in include.services %}
+			<div class="{{c}}__service">
+				<h3 class="{{c}}__title">{{ service.title }}</h3>
+				<div class="{{c}}__content">
+					{{ service.description_html }}
+				</div>
+				<img src="{{ service.image }}" alt="{{ service.title }} image" />
+			</div>
+		{% endfor %}
+	</div>
+</div>

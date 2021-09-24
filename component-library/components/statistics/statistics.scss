@@ -1,0 +1,63 @@
+.c-statistics {
+	&__inner-wrapper {
+		padding: var(--component-padding) 0;
+	}
+
+	&__main-heading {
+		text-align: center;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+		grid-gap: 25px;
+		padding-top: var(--component-padding);
+	}
+
+	&__stat {
+		position: relative;
+		margin: 45px 0 0 0;
+		border: 1px solid var(--border-color);
+		border-radius: 3px;
+		padding: 0 20px 25px 20px;
+		text-align: center;
+	}
+
+	&__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: -30px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		padding: 10px;
+		max-width: 68px;
+		max-height: 68px;
+		box-shadow: 2px 7px 39px 9px var(--shadows-color);
+		border-radius: 50px;
+		background-color: var(--page-color);
+
+		img {
+			padding: 5px;
+			width: 48px;
+			height: 48px;
+			box-sizing: content-box;
+		}
+	}
+
+	&__content {
+		p {
+		}
+	}
+
+	&__heading {
+		margin-top: 60px;
+		font-size: 2.88em;
+	}
+
+	&__text {
+		font-size: 1.76em;
+	}
+}

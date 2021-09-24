@@ -1,0 +1,15 @@
+{% assign n = 'n-post-preview' %}
+<div class="{{n}}__inner-wrapper">
+	<div class="{{n}}__top">
+		<img class="{{n}}__preview-image" src="{{ include.post.SEO_options.image }}" alt="{{ include.post.title }} image" />
+		{% bookshop post-header post=include.post %}
+	</div>
+	<div class="{{n}}__content">
+		{{ include.post.excerpt }}
+	</div>
+
+	{% bookshop button 
+				label="Read More"
+				variant="Filled"
+				link_url=include.post.url %}
+</div>

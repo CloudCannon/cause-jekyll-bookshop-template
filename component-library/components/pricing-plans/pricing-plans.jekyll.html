@@ -1,0 +1,22 @@
+<div class="{{c}}__inner-wrapper
+			component">
+	<h2 class="{{c}}__heading">{{ include.heading }}</h2>
+	<p class="{{c}}__subheading">{{ include.subheading }}</p>
+	<div class="{{c}}__plans">
+		{% for plan in include.plans %}
+			<div class="{{c}}__card">
+				<h3 class="{{c}}__title"
+					style="background-color: {{ plan.card_color }}">{{ plan.title }}</h3>
+				<ul class="{{c}}__features">
+					<li>{{ plan.price }}</li>
+					{% for item in plan.features %}
+						<li>{{ item.feature }}</li>
+					{% endfor %}
+				</ul>
+				<a class="{{c}}__button"
+				   href="{{ plan.button_url }}"
+				   style="background-color: {{ plan.card_color }}">Get started →</a>
+			</div>
+		{% endfor %}
+	</div>
+</div>

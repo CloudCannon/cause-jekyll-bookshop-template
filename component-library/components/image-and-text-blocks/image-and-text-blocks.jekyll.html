@@ -1,0 +1,25 @@
+<div class="{{c}}__inner-wrapper
+			component">
+	{% for block in include.blocks %}
+		<div class="{{c}}__block
+					{{c}}__block--{{ block.content_arrangement | slugify }}">
+			<div class="{{c}}__content-wrapper">
+				<div class="{{c}}__heading">
+					{{ block.heading_html }}
+				</div>
+				<div class="{{c}}__content">
+					{{ block.content_html }}
+					{% if block.button.button_label %}
+						{% bookshop button 
+									label=block.button.button_label
+									variant=block.button.button_variant
+									link_url=block.button.button_link_url %}
+					{% endif %}
+				</div>
+			</div>
+			<div class="{{c}}__image-wrapper">
+				<img src="{{ block.image }}" alt="{{ block.heading_html | strip_html }}" />
+			</div>
+		</div>
+	{% endfor %}
+</div>

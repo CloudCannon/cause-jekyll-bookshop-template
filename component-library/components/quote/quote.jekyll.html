@@ -1,0 +1,11 @@
+<div class="{{c}}__inner-wrapper
+			component">
+	<div class="{{c}}__image-wrapper">
+		<img src="{{ include.image }}" alt="{{ include.name }}" />
+		<p class="{{c}}__quote-details {{c}}__quote-details--alternate">{{ include.name }}{% if include.role %} - {{ include.role }}{% endif %}</p>
+	</div>
+	<div class="{{c}}__content-wrapper">
+		<p class="{{c}}__quote">{{ include.quote_text }}</p>
+		<p class="{{c}}__quote-details">{{ include.name }} - {{ include.role }}</p>
+	</div>
+</div>

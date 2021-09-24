@@ -1,0 +1,20 @@
+{% if include.show_staff %}
+	<div class="{{c}}__inner-wrapper
+				component">
+		<h2 class="{{c}}__heading">{{ include.heading }}</h2>
+		<p class="{{c}}__subheading">{{ include.subheading }}</p>
+		<div class="{{c}}__staff">
+			{% for member in site.staff_members %}
+				<div class="{{c}}__staff-card">
+					<img class="{{c}}__staff-image" 
+						 src="{{ member.image }}"
+						 alt="{{ member.name }}" />
+					<h4 class="{{c}}__name">
+						<a href="https://twitter.com/{{ member.twitter }}">{{ member.name }}</a>
+					</h4>
+					<p class="{{c}}__position">{{ member.position }}</p>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endif %}

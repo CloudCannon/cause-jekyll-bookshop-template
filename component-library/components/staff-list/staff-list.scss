@@ -1,0 +1,48 @@
+.c-staff-list {
+	&__inner-wrapper {
+		padding: var(--component-padding) 0;
+	}
+
+	&__heading, &__subheading {
+		text-align: center;
+	}
+
+	&__staff {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		padding-top: 20px;
+	}
+
+	&__staff-card {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex: 1 300px;
+		padding: 30px 20px;
+		box-sizing: border-box;
+	}
+
+	&__staff-image {
+		width: 200px;
+		height: 200px;
+		object-fit: center center;;
+		border-radius: 100%;
+	}
+
+	&__name {
+		margin: 20px 0 0 0;
+		font-size: 1em;
+
+		a {
+			font-size: var(--content-font-size);
+		}
+	}
+
+	&__position {
+		margin: 0;
+		font-size: 1.6em;
+	}
+}

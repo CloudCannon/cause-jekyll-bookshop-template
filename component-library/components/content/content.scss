@@ -1,0 +1,27 @@
+.c-content {
+
+    &__inner-wrapper {
+        padding: var(--component-padding) var(--s-30-50);
+        
+    }
+
+    &__content-wrapper {
+        margin: 0 auto;
+        max-width: 1024px;
+
+        & >:first-child {
+            margin-top: 0;
+        }
+        
+        & >:last-child {
+            margin-bottom: 0;
+        }
+
+        .cms-embed {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: var(--component-padding) 0;
+        }
+    }
+}

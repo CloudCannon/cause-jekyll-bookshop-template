@@ -1,0 +1,21 @@
+<div class="{{c}}__inner-wrapper
+			component">
+	{% if include.heading %}
+		<h2 class="{{c}}__main-heading">{{ include.heading }}</h2>
+	{% endif %}
+	<div class="{{c}}__grid">
+		{% for stat in include.statistics %}
+			<div class="{{c}}__stat">
+				<div class="{{c}}__content-wrapper">
+					<div class="{{c}}__icon">
+						<img src="{{ stat.icon_image }}" alt="{{ stat.title }}" />
+					</div>
+					<div class="{{c}}__content">
+						<h3 class="{{c}}__heading">{{ stat.heading}}</h3>
+						<p class="{{c}}__text">{{ stat.text }}</p>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>
