@@ -95,6 +95,23 @@ body {
         border-left: 4px solid rgba(0,0,0,0.2);
         background-color: rgba(0,0,0,0.04);
     }
+
+    pre {
+        padding: 10px;
+        background: #d7d7d7;
+        border-radius: 2px;
+
+         code {
+            font-size: 1.4em;
+        }
+    }
+
+    p code, li code {
+        font-size: initial;
+        padding: 6px 10px;
+        background: #d7d7d7;
+        border-radius: 2px;
+    }
 }
 
 // Layouts
@@ -125,6 +142,10 @@ body {
                 display: none;
             }
         }
+    }
+
+    &--client {
+        padding: 0;
     }
 }
 
