@@ -2,13 +2,93 @@
 layout: default
 ---
 
-<div class="layout layout--post">
-	{% bookshop post-header 
-		post=page
-		title=true %}
-	{{ content }}
-	{% if page.author_staff_member %}
-		{% bookshop author-card %}
-	{% endif %}
-	{% bookshop post-navigation %}
-</div>
+{% if site.data.general_settings.website_theme contains "Urban" %}
+	{% assign c = "c-post-header" %}
+	{% assign component_theme = "Branded" %}
+	{% assign heading = "<h2>" | append: page.title | append: "</h2>" %}
+	<div class="{{c}}
+            cms-editor-link 
+            component-wrapper
+            {% if component_theme %}
+                component-wrapper--{{component_theme | slugify }}
+            {% else %}
+                component-wrapper--light
+            {% endif %}">
+           {% comment %}
+		{% bookshop header-with-image
+			heading_html = heading
+			subheading_html = "<p></p>"
+			text_color = "#ffffff"
+			content_alignment = "Left"
+			button_label = false
+			button_link_url = false
+			button_variant = "Transparent"
+			image = false
+			component_theme = "Branded"
+		%}
+		{% endcomment %}
+		<div class="component">
+			{% bookshop post-header 
+				post=page
+				title=true %}
+		</div>
+	</div>
+
+	{% assign c = "c-content" %}
+	{% assign component_theme = "Light" %}
+	<div class="{{c}}
+            cms-editor-link 
+            component-wrapper
+            {% if component_theme %}
+                component-wrapper--{{component_theme | slugify }}
+            {% else %}
+                component-wrapper--light
+            {% endif %}">
+		{% bookshop content
+			content_html = page.content
+			component_theme = component_theme
+		%}
+	</div>
+
+	{% assign c = "c-author-card" %}
+	{% assign component_theme = "Dark" %}
+	<div class="{{c}}
+            cms-editor-link 
+            component-wrapper
+            {% if component_theme %}
+                component-wrapper--{{component_theme | slugify }}
+            {% else %}
+                component-wrapper--light
+            {% endif %}">
+        <div class="component">
+			{% bookshop author-card %}
+		</div>
+	</div>
+
+	{% assign c = "c-post-navigation" %}
+	{% assign component_theme = "Light" %}
+	<div class="{{c}}
+            cms-editor-link 
+            component-wrapper
+            {% if component_theme %}
+                component-wrapper--{{component_theme | slugify }}
+            {% else %}
+                component-wrapper--light
+            {% endif %}">
+        <div class="component">
+			{% bookshop post-navigation %}
+		</div>
+	</div>
+	{% else %}
+
+		<div class="layout layout--post">
+			{% bookshop post-header 
+				post=page
+				title=true %}
+			{{ content }}
+			{% if page.author_staff_member %}
+				{% bookshop author-card %}
+			{% endif %}
+			{% bookshop post-navigation %}
+		</div>
+{% endif %}
