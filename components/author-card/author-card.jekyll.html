@@ -3,7 +3,12 @@
 {% assign author = site.staff_members | where: "url", author_path | first %}
 <div class="{{c}}__inner-wrapper">
 	<h4 class="{{c}}__heading">Meet the author</h4>
-	<div class="{{c}}__content">
+	{% if author.twitter %}
+		<a class="{{c}}__content"
+			href="https://twitter.com/{{ author.twitter }}">
+	{% else %}
+		<div class="{{c}}__content">
+	{% endif %}
 		<div class="{{c}}__top">
 			<img class="{{c}}__image" 
 				 src="{{ author.image }}" 
@@ -19,5 +24,9 @@
 			</div>
 		</div>
 		<p class="{{c}}__text">{{ author.blurb }}</p>
-	</div>
+	{% if author.twitter %}
+		</a>
+	{% else %}
+		</div>
+	{% endif %}
 </div>
