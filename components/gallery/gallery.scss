@@ -29,10 +29,11 @@
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		grid-gap: 25px;
 		justify-items: center;
-		padding: 20px;
+		padding: 20px 0;
 
 		&--with-details {
 			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+			padding: 20px;
 
 			#{$c}__item-details {
 				display: none;
@@ -60,7 +61,11 @@
 		}
 
 		&--full-size {
-			grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+			grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+
+			@media(max-width: 900px) {
+				grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+			}
 		}
 	}
 

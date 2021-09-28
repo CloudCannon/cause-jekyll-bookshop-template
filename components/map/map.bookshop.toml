@@ -7,6 +7,7 @@ tags = ["Content"]
 
 [props]
 google_maps_api_key = ''
+component_theme = "Light"
 
 [props.map]
 latitude = -45.8779128
