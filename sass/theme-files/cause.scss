@@ -1,3 +1,8 @@
+// 
+// THEME: Cause
+// 
+
+
 body {
     --breakpoint-max: 1000px;
     --breakpoint-min: 900px;
@@ -198,7 +203,7 @@ body {
 	}
 
 	&__column li {
-		padding: 0 25px;
+		padding: 0 25px 0 0;
 		max-width: 313px;
 		font-size: 1.4em;
 	}
