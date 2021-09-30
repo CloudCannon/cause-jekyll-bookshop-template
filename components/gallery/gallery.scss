@@ -32,7 +32,7 @@
 		padding: 20px 0;
 
 		&--with-details {
-			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+			grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
 			padding: 20px;
 
 			#{$c}__item-details {
