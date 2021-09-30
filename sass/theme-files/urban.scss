@@ -1,8 +1,3 @@
-// 
-// THEME: Urban
-// 
-
-
 :root {
     --breakpoint-max: 1050px;
 }
@@ -144,6 +139,7 @@ body {
 	.c-footer {
 		&__column {
 			h4 {
+				max-width: none;
 				color: var(--dark-text-color);
 			}
 			
@@ -378,13 +374,18 @@ body {
 			padding: 0;
 		}
 
+		&.component-wrapper::before {
+			top: -2px;
+		}
+
 		&.component-wrapper::before, &.component-wrapper::after {
-			display: none;
+			// display: none;
+			height: 84px;
 		}
 
 		&__map {
-			height: 475px;
-			transform: skewY(-5deg);
+			height: 600px;
+			// transform: skewY(-5deg);
 			z-index: 2;
 
 		}
