@@ -158,8 +158,11 @@ body.cms-editor-active {
 .cms-editor-active {
     .cms-editor-link {
         position: relative;
+        z-index: 10;
         outline: unset !important;
         cursor: pointer;
+        max-width: calc(150px + var(--breakpoint-max));
+        margin: 0 auto;
 
         .cms-editor-button {
             position: absolute;
