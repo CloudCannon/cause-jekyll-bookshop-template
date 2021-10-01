@@ -21,6 +21,12 @@
 		p {
 
 		}
+
+		&--with-details-stacked {
+			@media(max-width: 1000px) {
+				max-width: none;
+			}
+		}
 	}
 
 	&__items {
@@ -33,7 +39,7 @@
 
 		&--with-details {
 			grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
-			padding: 20px;
+			// padding: 20px;
 
 			#{$c}__item-details {
 				display: none;
@@ -41,6 +47,7 @@
 		}
 
 		&--with-details-stacked {
+			flex: 1 260px;
 			grid-template-columns: 1fr;
 
 			#{$c}__item {
