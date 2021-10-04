@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<div class="layout layout--client">
+	{% assign heading = "<h1><a href='/portfolio' style='font-style: italic'>Our Work</a> / " | append: page.title | append: "</h1>" %}
+	{% assign subheading = "<p>" | append: page.subtitle | append: "</p>" %}
+	{% assign c = "c-header-with-image" %}
+	{% assign component_theme = "Branded" %}
+	<div class="{{c}}
+                cms-editor-link 
+                component-wrapper
+                {% if component_theme %}
+                    component-wrapper--{{component_theme | slugify }}
+                {% else %}
+                    component-wrapper--light
+                {% endif %}">
+		{% bookshop header-with-image
+			heading_html = heading
+			subheading_html = subheading
+			text_color = "#ffffff"
+			content_alignment = "Left"
+			button_label = false
+			button_link_url = false
+			button_variant = "Transparent"
+			image = false
+			component_theme = "Branded"
+		%}
+    </div>
+
+
+	{% assign c = "c-content" %}
+	{% assign component_theme = "Light" %}
+	<div class="{{c}}
+                cms-editor-link 
+                component-wrapper
+                {% if component_theme %}
+                    component-wrapper--{{component_theme | slugify }}
+                {% else %}
+                    component-wrapper--light
+                {% endif %}">
+		{% bookshop content
+			content_html = page.content
+			component_theme = component_theme
+		%}
+
+		{% assign button_text = "View " | append: page.title | append: " →" %}
+
+		<div class="component" style="padding-top: 0;">
+			{% bookshop button
+				label = button_text
+				link_url = page.external_url
+				variant = "Plain Text"
+				open_in_new_tab = true
+			%}
+		</div>
+    </div>
+</div>
