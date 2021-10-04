@@ -4,7 +4,11 @@
 			{% endif %}
 			component">
 	{% if include.details.show_details %}
-		<div class="{{c}}__details">
+		{% assign item_number = include.gallery_items | size %}
+		<div class="{{c}}__details
+					{% if item_number < 3 %}
+					{{c}}__details--with-details-stacked
+					{% endif %}">
 			<h3>{{ include.details.heading }}</h3>
 			<p>{{ include.details.subheading }}</p>
 			{% if include.details.button_link_url %}
@@ -15,7 +19,6 @@
 			{% endif %}
 		</div>
 	{% endif %}
-	{% assign item_number = include.gallery_items | size %}
 	<div class="{{c}}__items
 				{% if include.details.show_details %}
 				{{c}}__items--with-details

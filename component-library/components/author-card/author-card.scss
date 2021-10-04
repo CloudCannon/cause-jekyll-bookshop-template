@@ -15,6 +15,14 @@
         font-size: 3.6em;
 	}
 
+	&__content {
+		text-decoration: none;
+		
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
 	&__top {
 		text-align: center;
 	}

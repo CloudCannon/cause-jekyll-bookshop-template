@@ -4,8 +4,7 @@
     {% assign block_count = 0 %}
     {% for block in include.content_blocks %}
         {% assign c = block._bookshop_name | prepend: 'c-' %}
-        <div class="{{c}}
-                    cms-editor-link 
+        <div class="{{c}} 
                     component-wrapper
                     {% if block.component_theme %}
                         component-wrapper--{{ block.component_theme | slugify }}
@@ -13,9 +12,11 @@
                         component-wrapper--light
                     {% endif %}" 
              data-cms-editor-link="cloudcannon:#content_blocks[{{ block_count }}]">
-             <span class="cms-editor-button"></span>
-            
-            {% bookshop {{block._bookshop_name}} bind=block %}
+
+             <div class="cms-editor-link">
+                <span class="cms-editor-button"></span>
+                {% bookshop {{block._bookshop_name}} bind=block %}
+            </div>
         </div>
         {% assign block_count = block_count | plus: 1 %}
     {% endfor %}
