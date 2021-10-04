@@ -26,11 +26,11 @@ permalink: pretty
 data_dir: '_website_settings'
 collections_dir: 'collections'
 collections:
-  web_pages:
-    name: 'Web Pages'
+  pages:
+    name: 'Pages'
     _icon: 'web'
     _singular_name: 'Page'
-    _slug: 'web_pages'
+    _slug: 'pages'
     output: true
     permalink: /:title/
   staff_members:
@@ -40,21 +40,22 @@ collections:
     _singular_name: 'Staff Member'
     _slug: 'staff_members'
     output: false
+  clients:
+    output: true
 
 # Make sure you add any new collections here for them to show in CloudCannon
-_explore:
-  groups:
-    - heading: Pages
-      collections:
-        - web_pages
-    - heading: Blog
-      collections:
-        - posts
-        - drafts
-        - staff_members
-    - heading: Settings
-      collections:
-        - website_settings
+_collection_groups:
+  - heading: Pages
+    collections:
+      - pages
+  - heading: Blog
+    collections:
+      - posts
+      - drafts
+      - staff_members
+  - heading: Settings
+    collections:
+      - data
 
 # The rest of this array structure will be
 # populated by the bookshop-array-structures plugin.
@@ -77,6 +78,7 @@ _select_data:
     - 'Hydra'
     - 'Justice'
     - 'Cause'
+    - 'Urban'
   component_themes:
     - 'Light'
     - 'Dark'
@@ -136,8 +138,8 @@ defaults:
           *content_defaults
   -
     scope:
-      type: web_pages
-      path: _web_pages/index.html
+      type: pages
+      path: _pages/index.html
     values:
       permalink: /
   -
@@ -145,3 +147,8 @@ defaults:
       type: posts
     values:
       layout: post
+  -
+    scope:
+      type: clients
+    values:
+      layout: client
