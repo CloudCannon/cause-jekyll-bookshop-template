@@ -95,6 +95,23 @@ body {
         border-left: 4px solid rgba(0,0,0,0.2);
         background-color: rgba(0,0,0,0.04);
     }
+
+    pre {
+        padding: 10px;
+        background: #d7d7d7;
+        border-radius: 2px;
+
+         code {
+            font-size: 1.4em;
+        }
+    }
+
+    p code, li code {
+        font-size: initial;
+        padding: 6px 10px;
+        background: #d7d7d7;
+        border-radius: 2px;
+    }
 }
 
 // Layouts
@@ -126,6 +143,10 @@ body {
             }
         }
     }
+
+    &--client {
+        padding: 0;
+    }
 }
 
 body.cms-editor-active {
@@ -137,8 +158,11 @@ body.cms-editor-active {
 .cms-editor-active {
     .cms-editor-link {
         position: relative;
+        z-index: 10;
         outline: unset !important;
         cursor: pointer;
+        max-width: calc(150px + var(--breakpoint-max));
+        margin: 0 auto;
 
         .cms-editor-button {
             position: absolute;

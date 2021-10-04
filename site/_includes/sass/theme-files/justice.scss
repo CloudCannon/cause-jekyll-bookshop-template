@@ -306,6 +306,14 @@ body {
     }
 }
 
+.c-gallery {
+    &__items {
+        &--with-details {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+    }
+}
+
 .n-post-preview {
     &__inner-wrapper {
         margin-bottom: 30px;
