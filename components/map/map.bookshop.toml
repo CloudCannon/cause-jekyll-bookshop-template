@@ -1,5 +1,5 @@
 [component]
-array_structures = [ "content_blocks" ]
+structures = ["content_blocks"]
 label = "Map"
 description = "Google maps page block"
 icon = "wysiwyg"
@@ -14,4 +14,3 @@ latitude = -45.8779128
 longitude = 170.5026709
 address = "1 Bond Street, Dunedin, New Zealand"
 zoom = 13
-

@@ -1,5 +1,5 @@
 [component]
-array_structures = [ "content_blocks" ]
+structures = ["content_blocks"]
 label = "Updates"
 description = "A grid of items detailing recent updates"
 icon = "wysiwyg"

@@ -1,5 +1,5 @@
 [component]
-array_structures = [ "content_blocks" ]
+structures = ["content_blocks"]
 label = "Call to action"
 description = "Generic call to action block"
 icon = "wysiwyg"
