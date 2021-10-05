@@ -1,5 +1,5 @@
 [component]
-array_structures = [ "content_blocks" ]
+structures = ["content_blocks"]
 label = "Divider"
 description = "A horizontal rule/divider"
 icon = "wysiwyg"

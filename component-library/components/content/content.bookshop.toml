@@ -1,5 +1,5 @@
 [component]
-array_structures = [ "content_blocks" ]
+structures = ["content_blocks"]
 label = "Content"
 description = "Generic rich content area"
 icon = "wysiwyg"

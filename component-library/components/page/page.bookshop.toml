@@ -1,5 +1,5 @@
 [component]
-array_structures = []
+structures = []
 label = "Page"
 description = ""
 icon = "layers"
