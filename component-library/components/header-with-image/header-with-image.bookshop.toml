@@ -1,5 +1,5 @@
 [component]
-array_structures = [ "content_blocks" ]
+structures = ["content_blocks"]
 label = "Header With Image"
 description = "Page header with headings, a button and an image"
 icon = "wysiwyg"

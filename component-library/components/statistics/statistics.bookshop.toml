@@ -1,5 +1,5 @@
 [component]
-array_structures = [ "content_blocks" ]
+structures = ["content_blocks"]
 label = "Statistics"
 description = "A group of statistics"
 icon = "wysiwyg"

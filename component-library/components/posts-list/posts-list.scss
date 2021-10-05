@@ -1,5 +1,8 @@
 .c-posts-list {
+
 	&__inner-wrapper {
+		position: relative;  // Required for the Urban theme
+		z-index: 5;  // Required for the Urban theme
 		margin: 0 auto;
 		padding: var(--component-padding) 25px;
 		max-width: 750px;

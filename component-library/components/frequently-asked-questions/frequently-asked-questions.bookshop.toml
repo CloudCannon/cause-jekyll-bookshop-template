@@ -1,5 +1,5 @@
 [component]
-array_structures = [ "content_blocks" ]
+structures = ["content_blocks"]
 label = "Frequently asked questions"
 description = "Questions and answers section"
 icon = "wysiwyg"

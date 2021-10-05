@@ -1,5 +1,5 @@
 [component]
-array_structures = [ "content_blocks" ]
+structures = ["content_blocks"]
 label = "Posts List"
 description = "Lists all of the site's blog posts"
 icon = "wysiwyg"
