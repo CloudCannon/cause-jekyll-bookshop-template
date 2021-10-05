@@ -5,28 +5,20 @@ GIT
     jekyll-watch (2.2.1)
       listen (~> 3.0)
 
-GIT
-  remote: https://github.com/cloudcannon/cc-template-components.git
-  revision: a1d6e6d77eb59a102b427aa8e07b58051785e46e
-  branch: main
-  specs:
-    cc-template-components (0.1.0)
-      jekyll (~> 4.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     citrus (3.0.2)
-    cloudcannon-jekyll-bookshop (2.0.0.pre.beta.11)
+    cloudcannon-jekyll-bookshop (2.0.0)
       dry-inflector (>= 0.1, < 1.0)
       jekyll (>= 3.7, < 5.0)
       node-runner (>= 1.0, < 2.0)
       toml-rb (>= 2.0, < 3.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.9)
-    dry-inflector (0.2.1)
+    dry-inflector (0.2.0)
     em-websocket (0.5.2)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -53,7 +45,7 @@ GEM
       terminal-table (~> 2.0)
     jekyll-archives (2.2.1)
       jekyll (>= 3.6, < 5.0)
-    jekyll-bookshop (2.0.0.pre.beta.11)
+    jekyll-bookshop (2.0.0)
       dry-inflector (>= 0.1, < 1.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-feed (0.15.1)
@@ -92,10 +84,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cc-template-components!
-  cloudcannon-jekyll-bookshop (= 2.0.0.pre.beta.11)
+  cloudcannon-jekyll-bookshop (= 2.0.0)
   jekyll-archives (~> 2.2.1)
-  jekyll-bookshop (= 2.0.0.pre.beta.11)
+  jekyll-bookshop (= 2.0.0)
   jekyll-feed (~> 0.15.1)
   jekyll-postcss-v2
   jekyll-watch!
