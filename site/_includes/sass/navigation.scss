@@ -5,7 +5,7 @@
 	z-index: 4;
 	top: 0;
 	left: 0;
-	padding: 16px 20px;
+	padding: 17px 20px;
 	width: 100%;
 	height: 70px;
 	max-height: 70px;
@@ -17,7 +17,11 @@
 			position: relative;
 			margin-top: -70px;
 			height: auto;
-			max-height: 800px;
+			max-height: 1200px;
+
+			#{$c}__nav-items {
+				padding-top: 10px;
+			}
 
 			#{$c}__item-wrapper {
 				height: auto;
@@ -59,7 +63,7 @@
 		@media (max-width: 700px) {
 			flex-direction: column;
 			align-items: flex-start;
-			padding-top: 10px;
+			padding-top: 0;
 			width: 100%;
 		}
 	}
