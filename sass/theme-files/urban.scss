@@ -41,6 +41,11 @@ body {
 
 		&--open {
 			margin-top: -73px;
+			padding: 21px 20px;
+
+			.c-navigation__label {
+				margin-top: 0;
+			}
 		}
 
 		&__inner-wrapper {
@@ -73,7 +78,7 @@ body {
 
 		&__label {
 			display: block;
-			margin-top: -5px;
+			margin-top: -3px;
 		}
 	}
 
