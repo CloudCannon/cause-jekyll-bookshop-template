@@ -1,5 +1,5 @@
 {
-  "name": "hydra-jekyll-bookshop",
+  "name": "cause-jekyll-bookshop",
   "private": true,
   "description": "An website template built by CloudCannon",
   "scripts": {
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CloudCannon/hydra-jekyll-bookshop-template.git"
+    "url": "git+https://github.com/CloudCannon/cause-jekyll-bookshop-template.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CloudCannon/hydra-jekyll-bookshop-template/issues"
+    "url": "https://github.com/CloudCannon/cause-jekyll-bookshop-template/issues"
   },
-  "homepage": "https://github.com/CloudCannon/hydra-jekyll-bookshop-template#readme",
+  "homepage": "https://github.com/CloudCannon/cause-jekyll-bookshop-template#readme",
   "devDependencies": {
     "@bookshop/browser": "^2.0.0",
     "@bookshop/live": "^2.0.0",
