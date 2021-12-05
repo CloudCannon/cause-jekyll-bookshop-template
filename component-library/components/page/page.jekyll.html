@@ -10,13 +10,8 @@
                         component-wrapper--{{ block.component_theme | slugify }}
                     {% else %}
                         component-wrapper--light
-                    {% endif %}" 
-             data-cms-editor-link="cloudcannon:#content_blocks[{{ block_count }}]">
-
-             <div class="cms-editor-link">
-                <span class="cms-editor-button"></span>
-                {% bookshop {{block._bookshop_name}} bind=block %}
-            </div>
+                    {% endif %}">
+            {% bookshop {{block._bookshop_name}} bind=block %}
         </div>
         {% assign block_count = block_count | plus: 1 %}
     {% endfor %}
