@@ -71,15 +71,24 @@ _inputs:
   page_theme:
     type: select
     options:
-      values: ["Light", "Dark"]
+      values: 
+        - Light
+        - Dark
   content_alignment:
     type: select
     options:
-      values: ["Left", "Center", "Right"],
+      values: 
+        - Left
+        - Center
+        - Right
   website_theme:
     type: select
     options:
-      values: ["Hydra", "Justice", "Cause", "Urban"]
+      values: 
+        - Hydra
+        - Justice
+        - Cause
+        - Urban
   link_type:
     type: select
     options:
@@ -90,9 +99,9 @@ _inputs:
     type: select
     options:
       values:
-        - 'Light'
-        - 'Dark'
-        - 'Branded'
+        - Light
+        - Dark
+        - Branded
   content_html:
     type: html
     options: *toolbar
