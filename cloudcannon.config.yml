@@ -1,0 +1,97 @@
+collection_config:
+  staff_members:
+    icon: 'supervisor_account'
+    _enabled_editors:
+      - data
+
+# Make sure you add any new collections here for them to show in CloudCannon
+collection_groups:
+  - heading: Pages
+    collections:
+      - pages
+  - heading: Blog
+    collections:
+      - posts
+      - drafts
+      - staff_members
+  - heading: Settings
+    collections:
+      - data
+
+# The rest of this structure definition will be
+# populated by the bookshop-array-structures plugin.
+_structures:
+  content_blocks:
+    style: modal
+
+paths:
+  uploads: "/images/uploads/:title"
+
+default_toolbar: &default_toolbar
+  width: 1180
+  height: 900
+  format: p h1 h2 h3 h4 h5 h6 div
+  styles: /assets/cms-styles.css
+  undo: true
+  redo: true
+  left: align-to-left
+  center: align-to-center
+  right: align-to-right
+  justify: justify
+  bold: true
+  italic: true
+  underline: true
+  strike: true
+  subscript: false
+  superscript: false
+  blockquote: true
+  table: true
+  copyformatting: true
+  removeformat: true
+  numberedlist: true
+  bulletedlist: true
+  outdent: false
+  indent: false
+  image: true
+  link: true
+  embed: true
+
+_inputs:
+  link_type:
+    type: select
+    options:
+      values:
+        - Text
+        - Button
+  component_themes:
+    type: select
+    options:
+      values:
+        - 'Light'
+        - 'Dark'
+        - 'Branded'
+  content_html:
+    type: html
+    options: *default_toolbar
+  lower_text_html:
+    type: html
+    options: *default_toolbar
+  content_text:
+    type: textarea
+  text:
+    type: textarea
+  live_domain_url: 
+    comment: "Remove any '/' at the end of the URL so your domain looks like this - 'https://example.com'"
+  website_description_text: 
+    comment: Used for search engine optimisation and sharing on social media
+  social_media_share_image: 
+    comment: 1200x675px
+  twitter_handle: 
+    comment: E.g. @username
+  large_bookmark_icon_image: 
+    comment: 32x32px
+  small_bookmark_icon_image: 
+    comment: 16x16px
+
+_editables:
+  content: *default_toolbar

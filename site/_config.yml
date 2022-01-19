@@ -27,70 +27,14 @@ data_dir: '_website_settings'
 collections_dir: 'collections'
 collections:
   pages:
-    name: 'Pages'
-    _icon: 'web'
-    _singular_name: 'Page'
     _slug: 'pages'
     output: true
     permalink: /:title/
   staff_members:
-    name: 'Staff Members'
-    _icon: 'supervisor_account'
-    _hide_content: true
-    _singular_name: 'Staff Member'
     _slug: 'staff_members'
     output: false
   clients:
     output: true
-
-# Make sure you add any new collections here for them to show in CloudCannon
-_collection_groups:
-  - heading: Pages
-    collections:
-      - pages
-  - heading: Blog
-    collections:
-      - posts
-      - drafts
-      - staff_members
-  - heading: Settings
-    collections:
-      - data
-
-# The rest of this array structure will be
-# populated by the bookshop-array-structures plugin.
-_array_structures:
-  content_blocks:
-    style: modal
-
-_select_data:
-  page_themes:
-    - Light
-    - Dark
-  alignments:
-    - Left
-    - Center
-    - Right
-  link_type:
-    - Text
-    - Button
-  website_themes:
-    - 'Hydra'
-    - 'Justice'
-    - 'Cause'
-    - 'Urban'
-  component_themes:
-    - 'Light'
-    - 'Dark'
-    - 'Branded'
-
-_comments:
-  live_domain_url: "Remove any '/' at the end of the URL so your domain looks like this - 'https://example.com'"
-  website_description_text: Used for search engine optimisation and sharing on social media
-  social_media_share_image: 1200x675px
-  twitter_handle: E.g. @username
-  large_bookmark_icon_image: 32x32px
-  small_bookmark_icon_image: 16x16px
 
 defaults:
   -
@@ -98,44 +42,6 @@ defaults:
       path: ""
     values:
       layout: default
-      _options:
-        content: &content_defaults
-          uploads_dir: "/images/uploads/:title"
-          width: 1180
-          height: 900
-          format: p h1 h2 h3 h4 h5 h6 div
-          styles: /assets/cms-styles.css
-          undo: true
-          redo: true
-          left: align-to-left
-          center: align-to-center
-          right: align-to-right
-          justify: justify
-          bold: true
-          italic: true
-          underline: true
-          strike: true
-          subscript: false
-          superscript: false
-          blockquote: true
-          table: true
-          copyformatting: true
-          removeformat: true
-          numberedlist: true
-          bulletedlist: true
-          outdent: false
-          indent: false
-          image: true
-          link: true
-          embed: true
-        content_text:
-          *content_defaults
-        content_html:
-          *content_defaults
-        text:
-          *content_defaults
-        text_html:
-          *content_defaults
   -
     scope:
       type: pages
