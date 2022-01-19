@@ -36,7 +36,7 @@ Find more templates, themes and step-by-step Jekyll tutorials at [CloudCannon Co
 
 ## Develop
 
-Cause was built with [Jekyll](http://jekyllrb.com/) version 4.2.0, but should support newer versions as well.
+Cause was built with [Jekyll](http://jekyllrb.com/) version 4.2.1, but should support newer versions as well.
 
 Install the dependencies for Bookshop:
 
@@ -47,14 +47,12 @@ $ npm install
 Install the Jekyll dependencies with [Bundler](http://bundler.io/):
 
 ~~~bash
-$ cd site
-$ bundle install
+$ npm run install-jekyll
 ~~~
 
 Run the website:
 
 ~~~bash
-$ cd ../
 $ npm start
 ~~~
 

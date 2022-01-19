@@ -7,7 +7,8 @@
     "bookshop-live": "bookshop-live -b ./component-library -o site/_cloudcannon/bookshop-live.js",
     "jekyll": "BUNDLE_GEMFILE=site/Gemfile bundle exec jekyll serve --source site --port 6060 --trace --unpublished",
     "start": "run-p bookshop-dev jekyll",
-    "postinstall": "mkdir -p site/node_modules/.bin/ && ln -sf ../../../node_modules/.bin/postcss site/node_modules/.bin/postcss"
+    "postinstall": "mkdir -p site/node_modules/.bin/ && ln -sf ../../../node_modules/.bin/postcss site/node_modules/.bin/postcss",
+    "install-jekyll": "BUNDLE_GEMFILE=site/Gemfile bundle install"
   },
   "repository": {
     "type": "git",
@@ -20,9 +21,9 @@
   },
   "homepage": "https://github.com/CloudCannon/cause-jekyll-bookshop-template#readme",
   "devDependencies": {
-    "@bookshop/browser": "^2.2.2",
-    "@bookshop/jekyll-engine": "^2.2.2",
-    "@bookshop/live": "^2.2.2",
+    "@bookshop/browser": "^2.2.3",
+    "@bookshop/jekyll-engine": "^2.2.3",
+    "@bookshop/live": "^2.2.3",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.3.5",
     "postcss-cli": "^8.3.1",
