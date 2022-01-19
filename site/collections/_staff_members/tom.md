@@ -6,5 +6,4 @@ twitter: cloudcannon
 blurb: Tom likes to travel and has visited over 50 countries.
 phone: '(03) 123 4567'
 phone_extension: 6
-_hide_content: true
 ---

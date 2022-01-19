@@ -1,6 +1,16 @@
 collection_config:
   staff_members:
     icon: 'supervisor_account'
+    subtext_key: position
+    sort:
+      key: name
+    sort_options:
+      - key: name
+      - key: name
+        order: desc
+      - key: position
+      - key: position
+        order: desc
     _enabled_editors:
       - data
 

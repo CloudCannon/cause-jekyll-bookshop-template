@@ -6,5 +6,4 @@ twitter:
 blurb:
 phone:
 phone_extension:
-_hide_content: true
 ---

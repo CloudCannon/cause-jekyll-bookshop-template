@@ -6,5 +6,4 @@ twitter: cloudcannon
 blurb: James spends his weekends watching his favourite NBA team - L.A. Clippers.
 phone: '(03) 123 4567'
 phone_extension: 4
-_hide_content: true
 ---
