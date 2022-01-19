@@ -38,7 +38,7 @@ paths:
   uploads: "/images/uploads/:title"
 
 _editables:
-  content: &default_toolbar
+  content: &toolbar
     width: 1180
     height: 900
     format: p h1 h2 h3 h4 h5 h6 div
@@ -95,12 +95,10 @@ _inputs:
         - 'Branded'
   content_html:
     type: html
-    options:
-      *default_toolbar
+    options: *toolbar
   lower_text_html:
     type: html
-    options:
-      *default_toolbar
+    options: *toolbar
   content_text:
     type: textarea
   text:
