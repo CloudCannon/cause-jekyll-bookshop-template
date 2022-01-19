@@ -85,10 +85,12 @@ _inputs:
         - 'Branded'
   content_html:
     type: html
-    options: *default_toolbar
+    options:
+      *default_toolbar
   lower_text_html:
     type: html
-    options: *default_toolbar
+    options:
+      *default_toolbar
   content_text:
     type: textarea
   text:
