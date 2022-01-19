@@ -27,43 +27,56 @@ _structures:
 paths:
   uploads: "/images/uploads/:title"
 
-default_toolbar: &default_toolbar
-  width: 1180
-  height: 900
-  format: p h1 h2 h3 h4 h5 h6 div
-  styles: /assets/cms-styles.css
-  undo: true
-  redo: true
-  left: align-to-left
-  center: align-to-center
-  right: align-to-right
-  justify: justify
-  bold: true
-  italic: true
-  underline: true
-  strike: true
-  subscript: false
-  superscript: false
-  blockquote: true
-  table: true
-  copyformatting: true
-  removeformat: true
-  numberedlist: true
-  bulletedlist: true
-  outdent: false
-  indent: false
-  image: true
-  link: true
-  embed: true
+_editables:
+  content: &default_toolbar
+    width: 1180
+    height: 900
+    format: p h1 h2 h3 h4 h5 h6 div
+    styles: /assets/cms-styles.css
+    undo: true
+    redo: true
+    left: align-to-left
+    center: align-to-center
+    right: align-to-right
+    justify: justify
+    bold: true
+    italic: true
+    underline: true
+    strike: true
+    subscript: false
+    superscript: false
+    blockquote: true
+    table: true
+    copyformatting: true
+    removeformat: true
+    numberedlist: true
+    bulletedlist: true
+    outdent: false
+    indent: false
+    image: true
+    link: true
+    embed: true
 
 _inputs:
+  page_theme:
+    type: select
+    options:
+      values: ["Light", "Dark"]
+  content_alignment:
+    type: select
+    options:
+      values: ["Left", "Center", "Right"],
+  website_theme:
+    type: select
+    options:
+      values: ["Hydra", "Justice", "Cause", "Urban"]
   link_type:
     type: select
     options:
       values:
         - Text
         - Button
-  component_themes:
+  component_theme:
     type: select
     options:
       values:
@@ -92,6 +105,3 @@ _inputs:
     comment: 32x32px
   small_bookmark_icon_image: 
     comment: 16x16px
-
-_editables:
-  content: *default_toolbar
