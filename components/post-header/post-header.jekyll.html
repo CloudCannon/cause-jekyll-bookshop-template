@@ -2,15 +2,12 @@
 	{% assign c = "n-post-header" %}
 {% endif %}
 <div class="{{c}}__inner-wrapper">
-	<h3 class="{{c}}__heading
-			   {% if include.title %}
-			   	   {{c}}__heading--title
-			   {% endif %}">
-			   {% unless include.post.title == page.title %}
-				   <a href="{{ include.post.url }}">{{ include.post.title }}</a>
-			   {% else %}
-			   		{{ include.post.title }}
-			   {% endunless %}
+	<h3 class="{{c}}__heading {% if include.title %}{{c}}__heading--title{% endif %}">
+		{% unless include.post.title == page.title %}
+			<a href="{{ include.post.url }}">{{ include.post.title }}</a>
+		{% else %}
+			{{ include.post.title }}
+		{% endunless %}
 	</h3>
 	<div class="{{c}}__post-info">
 		<div class="{{c}}__categories">
@@ -22,8 +19,7 @@
 		</div>
 		<span class="{{c}}__date">{{ include.post.date | date_to_long_string }}</span>
 	</div>
-	{% assign author_id = include.post.author_staff_member | prepend: "/staff_members/" | append: "/" %}
-	{% assign author = site.staff_members | where: "url", author_id | first %}
+	{% assign author = site.staff_members | find: "_id", include.post.author_staff_member %}
 	<div class="{{c}}__author">
 		<img src="{{ author.image }}" alt="Photo of {{ author.name }}" width="30" height="30">
 		<span>{{ author.name }}</span>
