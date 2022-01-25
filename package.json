@@ -1,14 +1,14 @@
 {
   "name": "cause-jekyll-bookshop",
   "private": true,
-  "description": "An website template built by CloudCannon",
+  "description": "A website template built by CloudCannon",
   "scripts": {
     "bookshop-dev": "bookshop-browser -p 6061 -b ./component-library",
     "bookshop-live": "bookshop-live -b ./component-library -o site/_cloudcannon/bookshop-live.js",
+    "jekyll:install": "BUNDLE_GEMFILE=site/Gemfile bundle install",
     "jekyll": "BUNDLE_GEMFILE=site/Gemfile bundle exec jekyll serve --source site --port 6060 --trace --unpublished",
     "start": "run-p bookshop-dev jekyll",
-    "postinstall": "mkdir -p site/node_modules/.bin/ && ln -sf ../../../node_modules/.bin/postcss site/node_modules/.bin/postcss",
-    "install-jekyll": "BUNDLE_GEMFILE=site/Gemfile bundle install"
+    "postinstall": "mkdir -p site/node_modules/.bin/ && ln -sf ../../../node_modules/.bin/postcss site/node_modules/.bin/postcss"
   },
   "repository": {
     "type": "git",
@@ -21,12 +21,12 @@
   },
   "homepage": "https://github.com/CloudCannon/cause-jekyll-bookshop-template#readme",
   "devDependencies": {
-    "@bookshop/browser": "^2.2.3",
-    "@bookshop/jekyll-engine": "^2.2.3",
-    "@bookshop/live": "^2.2.3",
+    "@bookshop/browser": "^2.3.1",
+    "@bookshop/jekyll-engine": "^2.3.1",
+    "@bookshop/live": "^2.3.1",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.3.5",
-    "postcss-cli": "^8.3.1",
-    "postcss-fluidvars": "^1.1.1"
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
+    "postcss-fluidvars": "^1.1.2"
   }
 }

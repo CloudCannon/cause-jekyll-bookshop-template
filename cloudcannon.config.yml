@@ -1,6 +1,6 @@
 collection_config:
   staff_members:
-    icon: 'supervisor_account'
+    icon: supervisor_account
     subtext_key: position
     sort:
       key: name
@@ -68,6 +68,14 @@ _editables:
     embed: true
 
 _inputs:
+  _id:
+    type: disabled
+    instance_value: UUID
+  author_staff_member:
+    type: select
+    options:
+      values: collections.staff_members
+      value_key: _id
   page_theme:
     type: select
     options:
