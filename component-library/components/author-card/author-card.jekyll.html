@@ -1,32 +1,34 @@
 {% assign c = "c-author-card" %}
-{% assign author_path = page.author_staff_member | prepend: "/staff_members/" | append: "/" %}
-{% assign author = site.staff_members | where: "url", author_path | first %}
+{% assign author = site.staff_members | find: "_id", page.author_staff_member %}
 <div class="{{c}}__inner-wrapper">
 	<h4 class="{{c}}__heading">Meet the author</h4>
-	{% if author.twitter %}
-		<a class="{{c}}__content"
-			href="https://twitter.com/{{ author.twitter }}">
-	{% else %}
-		<div class="{{c}}__content">
-	{% endif %}
+	<div class="{{c}}__content">
 		<div class="{{c}}__top">
-			<img class="{{c}}__image" 
-				 src="{{ author.image }}" 
+			<img class="{{c}}__image"
+				 src="{{ author.image }}"
 				 alt="{{ author.name }}" />
 			<div class="{{c}}__details">
-				<p class="{{c}}__name">{{ author.name }}</p>
+				<p class="{{c}}__name">
+					{% if author.twitter %}
+						<a href="https://twitter.com/{{ author.twitter }}">{{ author.name }}</a>
+					{% else %}
+						{{ author.name }}
+					{% endif %}
+				</p>
+
 				{% if author.position %}
 					<p class="{{c}}__role">{{ author.position }}</p>
 				{% endif %}
+
 				{% if author.phone %}
-					<p class="{{c}}__phone"><a href="tel:{{ author.phone }}">{{ author.phone }}</a> ext {{ author.phone_extension }}</p>
+					<p class="{{c}}__phone"><a href="tel:{{ author.phone }}">{{ author.phone }}</a>
+						{% if author.phone_extension %}
+							ext {{ author.phone_extension }}
+						{% endif %}
+					</p>
 				{% endif %}
 			</div>
 		</div>
 		<p class="{{c}}__text">{{ author.blurb }}</p>
-	{% if author.twitter %}
-		</a>
-	{% else %}
-		</div>
-	{% endif %}
+	</div>
 </div>
