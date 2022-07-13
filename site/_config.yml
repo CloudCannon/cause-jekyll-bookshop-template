@@ -1,6 +1,5 @@
 plugins:
   - jekyll-bookshop
-  - cloudcannon-jekyll-bookshop
   - jekyll-postcss-v2
   - jekyll-archives
   - jekyll-feed

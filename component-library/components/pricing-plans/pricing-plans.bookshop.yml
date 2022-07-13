@@ -1,0 +1,43 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Pricing Plans
+  description: Pricing plan cards
+  icon: wysiwyg
+  tags:
+    - Marketing
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  heading: ""
+  subheading: ""
+  component_theme: ""
+  plans:
+    - title: ""
+      card_color: ""
+      price: ""
+      button_url: ""
+      features:
+        - feature: ""
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  heading: Find the perfect plan for your business
+  subheading: All plans include our award winning sales optimization solution to
+    track your sales in real time.
+  component_theme: Light
+  plans:
+    - title: Basic
+      card_color: "#8e8e8e"
+      price: $25 per month
+      button_url: "#"
+      features:
+        - feature: Up to 5 users
+        - feature: Basic lead scoring
+        - feature: CRM
+        - feature: Basic reporting
+        - feature: Sales map
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs: {}

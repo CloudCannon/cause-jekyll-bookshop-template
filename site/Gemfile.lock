@@ -1,13 +1,13 @@
 GIT
   remote: https://github.com/CloudCannon/jekyll-sass-converter.git
-  revision: c0356f6fc3a4d4590787134041110d50cb3c175a
+  revision: c57057b45f72b9259838f7baf9026cb24b8ae137
   specs:
-    jekyll-sass-converter (2.1.0)
-      sass-embedded
+    jekyll-sass-converter (2.2.0)
+      sass-embedded (~> 1.0)
 
 GIT
   remote: https://github.com/CloudCannon/jekyll-watch
-  revision: 328940540e279e77a83eb60ad7c3a94a848f8821
+  revision: d220b890e179afc1c518d34c32be8bf168b19ace
   specs:
     jekyll-watch (2.2.1)
       listen (~> 3.0)
@@ -17,24 +17,18 @@ GEM
   specs:
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
-    citrus (3.0.2)
-    cloudcannon-jekyll-bookshop (2.2.3)
-      dry-inflector (>= 0.1, < 1.0)
-      jekyll (>= 3.7, < 5.0)
-      node-runner-temp-fix-windows (>= 1.0, < 2.0)
-      toml-rb (>= 2.0, < 3.0)
     colorator (1.1.0)
-    concurrent-ruby (1.1.9)
-    dry-inflector (0.2.1)
+    concurrent-ruby (1.1.10)
+    dry-inflector (0.3.0)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
     ffi (1.15.5)
     forwardable-extended (2.6.0)
-    google-protobuf (3.19.3)
+    google-protobuf (3.21.2)
     http_parser.rb (0.8.0)
-    i18n (1.8.11)
+    i18n (1.11.0)
       concurrent-ruby (~> 1.0)
     jekyll (4.2.1)
       addressable (~> 2.4)
@@ -53,13 +47,13 @@ GEM
       terminal-table (~> 2.0)
     jekyll-archives (2.2.1)
       jekyll (>= 3.6, < 5.0)
-    jekyll-bookshop (2.2.3)
+    jekyll-bookshop (3.2.1)
       dry-inflector (>= 0.1, < 1.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-feed (0.15.1)
       jekyll (>= 3.7, < 5.0)
     jekyll-postcss-v2 (1.0.1)
-    kramdown (2.3.1)
+    kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
@@ -68,32 +62,30 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
-    node-runner-temp-fix-windows (1.0.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    public_suffix (4.0.6)
-    rb-fsevent (0.11.0)
+    public_suffix (4.0.7)
+    rake (13.0.6)
+    rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rexml (3.2.5)
-    rouge (3.27.0)
+    rouge (3.29.0)
     safe_yaml (1.0.5)
-    sass-embedded (0.11.0)
-      google-protobuf (~> 3.19.0)
+    sass-embedded (1.53.0)
+      google-protobuf (~> 3.19)
+      rake (>= 10.0.0)
     terminal-table (2.0.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
-    toml-rb (2.1.0)
-      citrus (~> 3.0, > 3.0)
     unicode-display_width (1.8.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  cloudcannon-jekyll-bookshop (= 2.2.3)
   jekyll (= 4.2.1)
   jekyll-archives (~> 2.2.1)
-  jekyll-bookshop (= 2.2.3)
+  jekyll-bookshop (= 3.2.1)
   jekyll-feed (~> 0.15.1)
   jekyll-postcss-v2
   jekyll-sass-converter!

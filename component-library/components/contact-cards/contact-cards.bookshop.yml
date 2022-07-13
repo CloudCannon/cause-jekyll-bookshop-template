@@ -1,0 +1,50 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Contact Cards
+  description: Contact ccards
+  icon: wysiwyg
+  tags:
+    - Content
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  heading: ""
+  content_html: ""
+  component_theme: ""
+  contacts:
+    - image: ""
+      name: ""
+      role: ""
+      phone: ""
+      phone_extension_number: ""
+      description: ""
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  heading: About
+  content_html: <p>Serving your community for over a century, Justice Law is
+    committed to helping people through a number of services. Our services range
+    from conveyancing, mortgages to family law. Our clients range from large
+    businesses to first home buyers. </p><p>Meet the members of our capable
+    team:</p>
+  component_theme: Light
+  contacts:
+    - image: //placekitten.com/440/440?a=.png
+      name: Jane Doe
+      role: LLB
+      phone: (03) 123 4567
+      phone_extension_number: "02"
+      description: Jane has 19 years of experience in law, and specialises in property
+        and business.
+    - image: //placebear.com/440/440?a=.png
+      name: John Doe
+      role: LLB
+      phone: (03) 123 4567
+      phone_extension_number: "11"
+      description: With an interest in employment law, John works tirelessly to
+        improve workplaces.
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs: {}

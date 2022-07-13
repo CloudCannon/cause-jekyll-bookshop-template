@@ -1,0 +1,26 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Staff List
+  description: Lists all members within the Staff Members collection
+  icon: wysiwyg
+  tags:
+    - Content
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  show_staff: true
+  heading: ""
+  subheading: ""
+  component_theme: ""
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  heading: Our team
+  subheading: We've built an amazing, fantastic team of developers, marketers,
+    designers and sales people.
+  component_theme: Light
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs: {}

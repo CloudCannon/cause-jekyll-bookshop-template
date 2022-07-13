@@ -5,7 +5,7 @@
 <body>
     <div class="body-wrapper">
         {% include navigation.html %}
-        <!-- 
+        <!--
             A data-bookshop-live enables live editing previews in CloudCannon.
             To enable live previews of new components, we render all components
             via a page component that expects an array of content blocks.
@@ -18,8 +18,8 @@
             on production this does nothing.
         -->
         <div data-bookshop-live="page" data-bookshop-props="page">
-            <!-- 
-                Bookshop components are accessed using the bookshop tag, 
+            <!--
+                Bookshop components are accessed using the bookshop tag,
                 using the same syntax as the standard Jekyll include tag.
             -->
 
@@ -36,11 +36,6 @@
             </a>
         </div>
         <script type="text/javascript" src="/assets/js/dark-mode.js"></script>
-
-        <!--
-            live component for CloudCannon live previews.
-        -->
-        {% bookshop_live _cloudcannon/bookshop-live.js %}
     </div>
 </body>
 </html>

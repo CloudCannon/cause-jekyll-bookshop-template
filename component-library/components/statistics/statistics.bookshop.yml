@@ -1,0 +1,35 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Statistics
+  description: A group of statistics
+  icon: wysiwyg
+  tags:
+    - Content
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  component_theme: ""
+  statistics:
+    - icon_image: ""
+      heading: ""
+      text: ""
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  component_theme: Light
+  statistics:
+    - icon_image: ""
+      heading: Population
+      text: New Zealand has a human population of just 4.5M while there are 70M sheep.
+    - icon_image: ""
+      heading: Economy
+      text: Sheep are the backbone of the economy yet they receive no compensation.
+    - icon_image: ""
+      heading: Work Conditions
+      text: Sheep are forced to eat grass every day of their life. How about some of
+        variety?
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs: {}

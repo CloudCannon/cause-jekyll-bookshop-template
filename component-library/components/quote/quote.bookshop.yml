@@ -1,0 +1,30 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Quote
+  description: Generic quote block
+  icon: wysiwyg
+  tags:
+    - Content
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  image: ""
+  quote_text: ""
+  name: ""
+  role: ""
+  component_theme: ""
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  image: https://source.unsplash.com/6anudmpILw4/600x400
+  quote_text: Hydra has shaped the business we have today. We have a repeatable
+    sales process and a strategy to scale our team. I recommend Hydra to any
+    business looking to improve their sales.
+  name: Jim James
+  role: CEO of Global Corp
+  component_theme: Light
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs: {}

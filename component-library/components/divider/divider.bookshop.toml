@@ -1,9 +1,0 @@
-[component]
-structures = ["content_blocks"]
-label = "Divider"
-description = "A horizontal rule/divider"
-icon = "wysiwyg"
-tags = ["Content"]
-
-[props]
-display_divider = true
