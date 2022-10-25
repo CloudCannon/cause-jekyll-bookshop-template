@@ -47,7 +47,7 @@ GEM
       terminal-table (~> 2.0)
     jekyll-archives (2.2.1)
       jekyll (>= 3.6, < 5.0)
-    jekyll-bookshop (3.2.1)
+    jekyll-bookshop (3.3.0)
       dry-inflector (>= 0.1, < 1.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-feed (0.15.1)
@@ -85,11 +85,11 @@ PLATFORMS
 DEPENDENCIES
   jekyll (= 4.2.1)
   jekyll-archives (~> 2.2.1)
-  jekyll-bookshop (= 3.2.1)
+  jekyll-bookshop (= 3.3.0)
   jekyll-feed (~> 0.15.1)
   jekyll-postcss-v2
   jekyll-sass-converter!
   jekyll-watch!
 
 BUNDLED WITH
-   2.1.4
+   2.3.11
